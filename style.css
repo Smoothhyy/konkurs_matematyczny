@@ -9,7 +9,12 @@ body{
     height: 100vh;
 }
 main{
-    background-color: rgb(75, 8, 8); /* spoko zmieni sie */
+    /* background-color: rgb(75, 8, 8); */ 
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/background-3.jpeg"); /* spoko zmieni sie */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     position: relative;
     width: 100%;
     height: 100%;
@@ -40,9 +45,10 @@ main .tile-container .tile{
     height: 17.5rem;
     border-radius: .5rem;
     font-style: italic;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
 
-@keyframes moving-tile{
+/* @keyframes moving-tile{
     from{
         transform: translateY(0rem);
     }
@@ -53,19 +59,26 @@ main .tile-container .tile{
    100%{
         transform: translateY(-.5rem);
     }
-}
+} 
+
+jak co, to jest skomentowane bo nie wiem 
+co bedzie lepsze, czy z tym czy bez
 
 main .tile-container .tile:hover{
+    border: 1px solid white;
     animation-name: moving-tile;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
-    border: 1px solid white;
     transition: 500ms;
 }
 
+*/
 
+main .tile-container .tile:hover{
+    border: 1px solid white;
+}
 
     main .tile-container .tile h1{
         width: fit-content;
