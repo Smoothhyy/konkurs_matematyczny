@@ -4,9 +4,21 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: Verdana;
+
+    --main-color: rgb(27,27,50);
+        --main-color-op: rgba(27,27,50, .4);
+    --sec-color: rgb(2,31,59);
+        --sec-color-op: rgba(2,31,59, 0.3);
+    --font-color: rgb(216, 225, 233);
+    --heading-color: rgb(142, 176, 210);
+
+    --font-body: Verdana;
+    --fancy-font: "Madimi One", sans-serif;
+    --font-heading: "Lato"; /* tak, font sie tak nazywa */
 }
 body{
     height: 100vh;
+    font-family: var(--font-body);
 }
 main{
     /* background-color: rgb(75, 8, 8); */ 
@@ -104,7 +116,7 @@ main .tile-container .tile:hover{
         transform-origin: left;
     }
 
-        main .tile-container .tile .span{
+        .span{
             font-family: 'Times New Roman';
             font-size: 130%;
             font-style: normal;

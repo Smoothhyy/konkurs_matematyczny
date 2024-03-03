@@ -10,49 +10,103 @@
     <!-- CSS DO PI i tylko pi -->
     <link rel="stylesheet" href="style-pi.css">
 
+    <!-- CUSTOM FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Madimi+One&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <main>
 
     
     <div class="animation-container">
-        <section class="part-1">
-        <span id="animate1" class="animate">3</span>
-        <span id="animate2" class="animate">.</span>
-        <span id="animate3" class="animate">1</span>
-        <span id="animate4" class="animate">4</span>
-        <span id="animate5" class="animate">1</span>
-        <span id="animate6" class="animate">5</span>
-        <span id="animate7" class="animate">9</span>
-        <span id="animate8" class="animate words">this</span>
-        <span id="animate9" class="animate words">is</span>
-        <span id="animate10" class="animate words">PI</span>
-        <span id="animate11" class="animate words">followed</span>
-        <span id="animate12" class="animate words">by:</span>
+    <section class="part-1">
+        <span class="animate-pt1">3</span>
+        <span class="animate-pt1">.</span>
+        <span class="animate-pt1">1</span>
+        <span class="animate-pt1">4</span>
+        <span class="animate-pt1">1</span>
+        <span class="animate-pt1">5</span>
+        <span class="animate-pt1">9</span>
+        <span class="animate-pt1 words">this</span>
+        <span class="animate-pt1 words">is</span>
+        <span class="animate-pt1 words">PI</span>
+        <span class="animate-pt1 words">followed</span>
+        <span class="animate-pt1 words">by:</span>
+    </section>
+    <section class="part-2">
+        <span class="animate-pt2">2</span>
+        <span class="animate-pt2">6</span>
+        <span class="animate-pt2">5</span>
+        <span class="animate-pt2">4</span>
+        <span class="animate-pt2">5</span>
+        <span class="animate-pt2">8</span>
+        <span class="animate-pt2">9</span>
+        <span class="animate-pt2 words">circumference</span>
+        <span class="animate-pt2 words">over</span>
+        <span class="animate-pt2 words">diameter</span>
+        <span class="animate-pt2">!</span>
     </section>
     </div>
     <div class="info-container">
-        <h1>yes.</h1>
+        <h1>Liczba <span class="span">&#960;</span></h1>
+        <p class="info-pi introduction">Co można o niej powiedzieć?</p>
+        <p class="show-more-1">Przede wszystkim, ta osobliwa 3.14 jest liczbą niezastąpioną w wielu dziedzinach. Pozwala ona na niezwykle dokładne wyniki, przede wszystkim w geometrii, liczeniu demografii, teorii liczb i nie tylko.</p>
+        <p class="info-pi history-of-pi">Jaka jest historia <span class="span">&#960;</span>?</p>
+        <p class="show-more-2"><span class="span">&#960;</span> ma swój początek już w starożytności, wówczas uważano, że 3.14 to tak naprawdę 3. Jednakże, na jednej tabliczce obliczono, że jednak jest to 3.125</p>
     </div>
 </main>
     <script>
-        let obj = document.querySelectorAll(".animate");
-        let interval = 500;
-        let y_index = 2.5;
+        const Obj1 = document.querySelectorAll(".animate-pt1");
+        const Obj2 = document.querySelectorAll(".animate-pt2");
+        const Interval = 300;
+        let yIndex = 2.5;
+        let done_obj1 = false;
+        let done_obj2 = false;
         $(document).ready(function(){   
-            obj.forEach(function(element, index){
+            if(!done_obj1){
+                Obj1.forEach(function(element, index){
                 
                 setTimeout(function () {
-                    y_index = y_index + 2.5;
+                    yIndex = yIndex + 2.5;
                     console.log(element);
                     $(element).css(
                         "opacity","1"
                     );
                     $(element).css(
-                        "transform",`translateY(${y_index}px)`
+                        "transform",`translateY(${yIndex}px)`
                     );
-                }, index * interval);
+                }, index * Interval);
                 })
+            }
+            done_obj1 = true;
+        })
+        $(".introduction").click(function(){
+            $(".show-more-1").toggle(500);
+            $(".history-of-pi").delay(2500).slideDown(500);
+        })
+        $(".history-of-pi").click(function(){
+            $(".introduction").slideUp(500);
+            $(".show-more-1").slideUp(500);
+            $(".show-more-2").toggle(500);
+
+            if(!done_obj2){
+                Obj2.forEach(function(element, index){
+                
+                setTimeout(function () {
+                    yIndex = yIndex + 2.5;
+                    console.log(element);
+                    $(element).css(
+                        "opacity","1"
+                    );
+                    $(element).css(
+                        "transform",`translateY(${yIndex}px)`
+                    );
+                }, index * Interval);
+                })
+            }
+           done_obj2 = true;
         })
 
     </script>
