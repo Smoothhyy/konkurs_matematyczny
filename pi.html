@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liczba PI</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- OGÓLNY CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS DO PI i tylko pi -->
+    <link rel="stylesheet" href="style-pi.css">
+
+</head>
+<body>
+    <main>
+
+    
+    <div class="animation-container">
+        <section class="part-1">
+        <span id="animate1" class="animate">3</span>
+        <span id="animate2" class="animate">.</span>
+        <span id="animate3" class="animate">1</span>
+        <span id="animate4" class="animate">4</span>
+        <span id="animate5" class="animate">1</span>
+        <span id="animate6" class="animate">5</span>
+        <span id="animate7" class="animate">9</span>
+        <span id="animate8" class="animate words">this</span>
+        <span id="animate9" class="animate words">is</span>
+        <span id="animate10" class="animate words">PI</span>
+        <span id="animate11" class="animate words">followed</span>
+        <span id="animate12" class="animate words">by:</span>
+    </section>
+    </div>
+    <div class="info-container">
+        <h1>yes.</h1>
+    </div>
+</main>
+    <script>
+        let obj = document.querySelectorAll(".animate");
+        let interval = 500;
+        let y_index = 2.5;
+        $(document).ready(function(){   
+            obj.forEach(function(element, index){
+                
+                setTimeout(function () {
+                    y_index = y_index + 2.5;
+                    console.log(element);
+                    $(element).css(
+                        "opacity","1"
+                    );
+                    $(element).css(
+                        "transform",`translateY(${y_index}px)`
+                    );
+                }, index * interval);
+                })
+        })
+
+    </script>
+</body>
+</html>
