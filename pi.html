@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liczba PI</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
     <!-- OGÓLNY CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- CSS DO PI i tylko pi -->
@@ -57,58 +57,8 @@
         <p class="show-more-2"><span class="span">&#960;</span> ma swój początek już w starożytności, wówczas uważano, że 3.14 to tak naprawdę 3. Jednakże, na jednej tabliczce obliczono, że jednak jest to 3.125</p>
     </div>
 </main>
-    <script>
-        const Obj1 = document.querySelectorAll(".animate-pt1");
-        const Obj2 = document.querySelectorAll(".animate-pt2");
-        const Interval = 300;
-        let yIndex = 2.5;
-        let done_obj1 = false;
-        let done_obj2 = false;
-        $(document).ready(function(){   
-            if(!done_obj1){
-                Obj1.forEach(function(element, index){
-                
-                setTimeout(function () {
-                    yIndex = yIndex + 2.5;
-                    console.log(element);
-                    $(element).css(
-                        "opacity","1"
-                    );
-                    $(element).css(
-                        "transform",`translateY(${yIndex}px)`
-                    );
-                }, index * Interval);
-                })
-            }
-            done_obj1 = true;
-        })
-        $(".introduction").click(function(){
-            $(".show-more-1").toggle(500);
-            $(".history-of-pi").delay(2500).slideDown(500);
-        })
-        $(".history-of-pi").click(function(){
-            $(".introduction").slideUp(500);
-            $(".show-more-1").slideUp(500);
-            $(".show-more-2").toggle(500);
-
-            if(!done_obj2){
-                Obj2.forEach(function(element, index){
-                
-                setTimeout(function () {
-                    yIndex = yIndex + 2.5;
-                    console.log(element);
-                    $(element).css(
-                        "opacity","1"
-                    );
-                    $(element).css(
-                        "transform",`translateY(${yIndex}px)`
-                    );
-                }, index * Interval);
-                })
-            }
-           done_obj2 = true;
-        })
-
-    </script>
+    <!--Dałem do osobnego pliku w /scripts/pi.js, żeby się szybciej ładowało-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/pi.js"></script>
 </body>
 </html>
