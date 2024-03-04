@@ -1,0 +1,72 @@
+#tMainContainer{
+    height: 100vh;
+}
+
+.tInfoRow{
+    height: 100px;
+}
+
+.tInfoContent{
+    
+    position: relative;
+    padding-bottom: 1px;
+    font-size: 2vh;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+    font-family: var(--fancy-font);
+    color: var(--heading-color);
+    float:right;
+    width: 70%;
+}
+
+.tInfoArrow{
+    text-align: right;
+    
+    position: relative;
+    float:left;
+    cursor: pointer;
+    
+    
+    height: 100%;
+    font-size: 2vh;
+    padding-left: 0.1vw;
+    width: 30%;
+    font-family: var(--fancy-font);
+    color: var(--heading-color);
+}
+
+.tInfoRow:hover .tInfoArrow{
+    animation: arrow 1.5s linear infinite alternate;
+}
+
+.tTextInfoRow{
+    
+}
+
+@keyframes arrow{
+    from {
+        transform: translate(0%, 0%);
+    }
+    to {
+        transform: translate(-10%, 0%);
+
+    }
+}
+.credits{
+    float: right;
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 0.8vw;
+    font-weight: 800;
+    align-self: baseline;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.tSlideMain{
+    display:none;
+    
+}
