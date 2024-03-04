@@ -6,9 +6,9 @@
     font-family: Verdana;
 
     --main-color: rgb(27,27,50);
-        --main-color-op: rgba(27,27,50, .6);
+        --main-color-op: rgba(27,27,50, .8);
     --sec-color: rgb(2,31,59);
-        --sec-color-op: rgba(2,31,59, 0.3);
+        --sec-color-op: rgba(2,31,59, 0.5);
     --font-color: rgb(216, 225, 233);
     --heading-color: rgb(142, 176, 210);
 
@@ -19,7 +19,20 @@
 body{
     height: 100vh;
     font-family: var(--font-body);
+    position: relative;
 }
+    .back{
+        z-index: 3;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        color: var(--font-color);
+        font-size: 2.5rem;
+        transition: 500ms;
+    }
+    .back:hover{
+        color: var(--heading-color);
+    }
 main{
     /* background-color: rgb(75, 8, 8); */ 
     background: linear-gradient(var(--main-color-op), var(--main-color-op)), url("img/background-3.jpeg"); /* spoko zmieni sie */
