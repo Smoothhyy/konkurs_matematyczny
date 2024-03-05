@@ -3,12 +3,14 @@ const Obj1 = document.querySelectorAll(".animate-pt1");
 const Obj2 = document.querySelectorAll(".animate-pt2");
 const Obj3 = document.querySelectorAll(".animate-pt3");
 const Obj4 = document.querySelectorAll(".animate-pt4");
+const Obj5 = document.querySelectorAll(".animate-pt5");
 const Interval = 300;
 let yIndex = 2.5;
 let done_obj1 = false;
 let done_obj2 = false;
 let done_obj3 = false;
 let done_obj4 = false;
+let done_obj5 = false;
 
 $(document).ready(function(){   
     if(!done_obj1){
@@ -58,7 +60,7 @@ $(".history-of-pi").click(function(){
     $(".introduction-to-pi").slideUp(500);
     $(".show-more-1").slideUp(500);
     $(".show-more-2").toggle(500);
-    $(".fun-facts-pi").delay(5000).slideDown(500, () => {
+    $(".fun-facts-pi-arrow").delay(5000).slideDown(500, () => {
         if(!done_obj3){
             Obj3.forEach(function(element, index){ 
                 setTimeout(function () {
@@ -79,7 +81,7 @@ $(".history-of-pi").click(function(){
     })
     
 })
-$(".fun-facts-pi").click(function(){
+$(".fun-facts-pi-arrow").click(function(){
     if(!done_obj4){
         Obj4.forEach(function(element, index){ 
             setTimeout(function () {
@@ -99,5 +101,26 @@ $(".fun-facts-pi").click(function(){
     done_obj4 = true;
     $(".history-of-pi").slideUp(500);
     $(".show-more-2").slideUp(500);
-    $(".fun-facts-pi").slideUp(500);
+    $(".fun-facts-pi-arrow").slideUp(500);
+    $(".fun-facts-pi").delay(500).slideDown(500);
+
+$(".fun-facts-pi").click(function(){
+    if(!done_obj5){
+        Obj5.forEach(function(element, index){ 
+            setTimeout(function () {
+                yIndex = yIndex + 2.5;
+                console.log(element);
+                $(element).css(
+                    "opacity","1"
+                )
+
+                $(element).css(
+                    "transform",`translateY(${yIndex}px)`
+                );
+
+            }, index * Interval);
+        })
+    }
+    done_obj5 = true;
+})
 })
