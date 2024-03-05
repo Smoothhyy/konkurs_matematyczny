@@ -94,3 +94,7 @@ h1{
 img{
     width: 3vw;
 }
+.treeContainer{
+    outline: 1px black solid;
+    width: auto;
+}

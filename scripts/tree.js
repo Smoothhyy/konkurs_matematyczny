@@ -24,7 +24,6 @@ function SpawnTrees(){
             
             if(markUps[i] == "ENDROW"){
                 $(this).append('<br>')
-                
             }else if(markUps[i] == "SPACE"){
                 $(this).append('<img src="img/tree/lE.png" alt="">')
                 $(this).append('<img src="img/tree/lE.png" alt="">')
