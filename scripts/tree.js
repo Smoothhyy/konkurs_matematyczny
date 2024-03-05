@@ -6,12 +6,37 @@ $( document ).ready(function() {
     
     InfoRowInitialize();
     DisplayCurrSlide(2)
+    SpawnTrees()
 });
 
 
 
+tcon = $(".treeContainer")
+function SpawnTrees(){
+    tcon.each(function(index){
+        orginal = null;
+        orginal = $(this).html();
+        markUps = orginal.split(" ")
+        markUps = markUps.filter((word) => word != "")
+         
+        $(this).empty();
+        for(i = 0; i <= markUps.length; i++){
+            
+            if(markUps[i] == "ENDROW"){
+                $(this).append('<br>')
+                
+            }else if(markUps[i] == "SPACE"){
+                $(this).append('<img src="img/tree/lE.png" alt="">')
+                $(this).append('<img src="img/tree/lE.png" alt="">')
+            }else{
+                $(this).append('<img src="img/tree/'+markUps[i]+'.png" alt="">')
+            }
+        }
 
-
+        console.log($(this).html())
+    });
+}
+//<img src="img/tree/"++".png" alt=""><img src="img/tree/sB.png" alt=""><img src="img/tree/lE.png" alt=""><br>
 
 
 
