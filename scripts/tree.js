@@ -5,6 +5,7 @@ $( document ).ready(function() {
     console.log("jquery rready")
     
     InfoRowInitialize();
+    DisplayCurrSlide(2)
 });
 
 
@@ -46,7 +47,7 @@ function ChangeSlide(){
 }
 
 function DisplayCurrSlide(toShow){
-    for(i = 0; i < numberOfSlides; ++i){
+    for(i = 0; i <= numberOfSlides; ++i){
         $("#tMain" + i).css({
             display: "none",
             opacity: "0%"

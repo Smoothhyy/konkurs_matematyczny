@@ -1,5 +1,21 @@
+*{
+    --main-color: rgb(27,27,50);
+        --main-color-op: rgba(27,27,50, .8);
+    --sec-color: rgb(2,31,59);
+        --sec-color-op: rgba(2,31,59, 0.5);
+    --font-color: rgb(216, 225, 233);
+    --heading-color: rgb(142, 176, 210);
+
+    --font-body: Verdana;
+    --fancy-font: "Madimi One", sans-serif;
+    --font-heading: "Lato";
+}
+h1{
+    
+}
 #tMainContainer{
     height: 100vh;
+    
 }
 
 .tInfoRow{
@@ -68,5 +84,13 @@
 
 .tSlideMain{
     display:none;
+    font-family: var(--font-body);
+}
+.mSS{ /*mathSymbolStyle*/
+    font-weight: 600;
+    font-style:italic
+}
+
+img{
     
 }
