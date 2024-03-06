@@ -17,7 +17,7 @@ $(document).ready(function(){
             Obj1.forEach(function(element, index){
                 
             setTimeout(function () {
-                yIndex = yIndex + 2.5;
+                yIndex = yIndex + 2.5
                 console.log(element);
                 $(element).css(
                     "opacity","1"
@@ -45,7 +45,7 @@ $(".history-of-pi").click(function(){
     if(!done_obj2){
         Obj2.forEach(function(element, index){ 
             setTimeout(function () {
-                yIndex = yIndex + 2.5;
+                yIndex = yIndex + 2.5
                 console.log(element);
                 $(element).css(
                     "opacity","1"
@@ -64,7 +64,7 @@ $(".history-of-pi").click(function(){
         if(!done_obj3){
             Obj3.forEach(function(element, index){ 
                 setTimeout(function () {
-                    yIndex = yIndex + 2.5;
+                    yIndex = yIndex + 2.5
                     console.log(element);
                     $(element).css(
                         "opacity","1"
@@ -85,7 +85,7 @@ $(".fun-facts-pi-arrow").click(function(){
     if(!done_obj4){
         Obj4.forEach(function(element, index){ 
             setTimeout(function () {
-                yIndex = yIndex + 2.5;
+                yIndex = yIndex + 2.5
                 console.log(element);
                 $(element).css(
                     "opacity","1"
@@ -108,7 +108,7 @@ $(".fun-facts-pi").click(function(){
     if(!done_obj5){
         Obj5.forEach(function(element, index){ 
             setTimeout(function () {
-                yIndex = yIndex + 2.5;
+                yIndex = yIndex + 2.5
                 console.log(element);
                 $(element).css(
                     "opacity","1"
@@ -122,5 +122,7 @@ $(".fun-facts-pi").click(function(){
         })
     }
     done_obj5 = true;
+
+    $(".show-more-3").slideDown(500);
 })
 })

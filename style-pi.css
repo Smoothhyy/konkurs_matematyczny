@@ -112,6 +112,20 @@ main{
         max-width: 40rem;
         text-align:left;
     }
+    .show-more-3{
+        display: none;
+        font-size: 1.35rem;
+        max-width: 35rem;
+        text-align: left;
+        margin: 0;
+        padding: .5rem;
+    }
+    .show-more-3::marker{
+        content: "\21B3";
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    
 
 .history-of-pi,.fun-facts-pi-arrow, .fun-facts-pi{
     display: none;
