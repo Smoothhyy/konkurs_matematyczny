@@ -50,21 +50,32 @@ function CompareScore(){
 
 
 
+pasek =$("#treePasek") //tak wiem, głupie. Ale lepiej mi się tak organizować
+function DisplayPasek(){
+    PopIn(pasek);
+}
 
-
-
+function ChangeBackground(imageUrl){
+    $("#pseudoBackground").append('<img id="imgBackground" src="img/tree/backgrounds/BGspace.jpg" class="img-fluid" alt="">')
+}
 
 
 
 /* -- START SKOPIUJ TO DO INNYCH START -- */
+function PopIn(element){
+    element.animate({
+        opacity: "100%"
+    }, 500)
+}
+
 
 function InfoRowInitialize(){
     const RczymJest = new InfoRow("Czym jest TREE3", 1)
     const RprosteWyt = new InfoRow("Proste wytłumaczenie", 2)
     const RtreePrz = new InfoRow("TREE1 i TREE2", 3)
     const RJakDuze = new InfoRow("Jak duże jest TREE3", 4)
-    const RPoro = new InfoRow("TREE3 - porównanie wielkości", 5)
-    const RHist = new InfoRow("TREE3 - historia", 6)
+    const RPoro = new InfoRow("Porównanie wielkości", 5)
+    const RHist = new InfoRow("Zakończenie", 6)
 
     $(".tInfoRow").on("click", ChangeSlide)
 
@@ -75,18 +86,21 @@ function InfoRowInitialize(){
     }
 }
 
+
 function ChangeSlide(){
    
     
 
-    $("#tArrow"+$(this).attr('id').replace("tRow","")).css("color", "lime") //NIE PRZEJMUJ SIĘ BŁĘDEM BO DZIAŁA I TAK ^^
+    $("#tArrow"+$(this).attr('id').replace("tRow","")).css("color", "lime") //NIE PRZEJMUJ SIĘ BŁĘDEM BO DZIAŁA I TAK ^w^
     
     DisplayCurrSlide($(this).attr('id').replace("tRow",""))
 
-    
+    UpdateTitle($(this).text());
 }
 
-
+function UpdateTitle(newTitle){
+    $(document).attr("title", "TREE(3) - " + newTitle);
+}
 
 function DisplayCurrSlide(toShow){
     for(i = 0; i <= numberOfSlides; ++i){

@@ -15,7 +15,11 @@ h1{
 }
 #tMainContainer{
     height: 100vh;
-    
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .tInfoRow{
@@ -103,7 +107,15 @@ img{
     width: fit-content;
     border: solid black 1px;
     background-color: rgb(255, 255, 255);
+    opacity: 0;
+    user-select: none;
 }
 #congratulations{
     display: none;
+}
+
+#pseudoBackground, #imgBackground{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
 }
