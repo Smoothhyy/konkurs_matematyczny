@@ -5,7 +5,7 @@ $( document ).ready(function() {
     console.log("jquery rready")
     
     InfoRowInitialize();
-    DisplayCurrSlide(2)
+    DisplayCurrSlide(5)
     SpawnTrees()
 });
 
@@ -68,6 +68,8 @@ function ChangeSlide(){
     $("#tArrow"+$(this).attr('id').replace("tRow","")).css("color", "lime")
     
     DisplayCurrSlide($(this).attr('id').replace("tRow",""))
+
+    
 }
 
 function DisplayCurrSlide(toShow){
@@ -83,6 +85,7 @@ function DisplayCurrSlide(toShow){
     $("#tMain"+toShow).animate({
         opacity: "100%"
     }, 500)
+
 }
 
 class InfoRow{

@@ -98,3 +98,9 @@ img{
     outline: 1px black solid;
     width: auto;
 }
+#treePasek{
+    height: 100vh;
+    width: fit-content;
+    border: solid black 1px;
+    background-color: rgb(255, 255, 255);
+}

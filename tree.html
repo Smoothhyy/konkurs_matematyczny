@@ -68,16 +68,54 @@
                         <h3>Ostatnią zasadą w tej "grze" jest to, że pierwsze drzewo jakie stworzymy, nie może mieć więcej niż jedno nasiono. Drugie nie może mieć więcej niż dwa nasiona. Trzecie nie może mieć więcej niż 3 nasiona i tak dalej.</h3>
                     </div>
                     <div id="tMain3" class="tSlideMain">
-                        ABC BLABLA TESKT 3 <br>
-                        Lorem ipsum dolor sit.
+                        <h1>TREE(1) I TREE(2)</h1>
+                        <h2>Znając wszystkie zasady, zagrajmy teraz w grę.</h2>
+                        <h2>TREE(1), jak definicja wskazuje, może zawierać maksymalnie tylko jedno jednokolorowe nasiono. Wybierzmy niebieskie</h2>
+                        <div class="treeContainer"> sB
+                        </div>
+                        <h2>I.. na tym nasza gra się kończy. Nie możemy dodać następnego niebieskiego nasiona, lub dwóch połączonych niebieskich nasion ponieważ kolejne drzewo zostałoby zawarte w pierwszym drzewie</h2>
+                        <div class="treeContainer"> sB SPACE sB ENDROW tA SPACE tB 
+                        </div>
+                        <div class="treeContainer"> lE SPACE sB ENDROW lE SPACE lS ENDROW sB SPACE sB ENDROW tA SPACE tB 
+                        </div>
+                        <h2>Drzewo B jest dość przejżyście zawarte w drzewie B nie ważne, czy damy dwa czy jedno nasiono, wiec wartość TREE(1) jest równa 1, ponieważ możemy stworzyć tylko jedno drzewo. Innaczej mówiąc; TREE(1) = 1</h2>
+                        <h2>Spróbujmy teraz zagrać w grę TREE(2)</h2>
+                        <h2>Na początku możemy stworzyć nasiono niebieskie: </h2>
+                        <div class="treeContainer"> sB ENDROW tA
+                        </div>
+                        <h2>I dodać nasiono innego koloru, wybierzmy zielone</h2>
+                        <div class="treeContainer"> sB SPACE sG ENDROW tA SPACE tB
+                        </div>
+                        <h2>Mogło by się wydawać, że nie ważne jakie drzewo damy następne, będzie ono zawarte w drzewie A lub B i jest to prawda. Nie jest to jednak najdłuższa gra jaka może zostać zagrana</h2>
+                        <div class="treeContainer"> lE SPACE sG ENDROW lE SPACE lS ENDROW sB SPACE sG  SPACE sG ENDROW tA SPACE tB SPACE tC 
+                        </div>
+                        <h2>Oto najdłuższa gra TREE(2), jaką możemy zagrać. Drzewo C nie zawiera drzewa A, ani drzewa B, więc TREE(2) = 3</h2>
+                        <h4>Zagrajmy teraz w TREE(3) [button]</h4>
                     </div>
                     <div id="tMain4" class="tSlideMain">
-                        ABC BLABLA TESKT 4 <br>
-                        Lorem ipsum dolor sit amet.
+                        <h1>TREE(3)</h1>
+                        <h2>Zachęcam Ciebie, użytkowniku strony, aby spróbować zagrać w grę TREE(3) i wpisać swój wynik: <br><input type="number"></h2>
+                        <h2>Dla przypomnienia zasad: odwiedź rozdział WPISZ</h2>
+                        <h2>Średnia użytkowników: 8.3</h2>
+                        <h2>Zagrałeś lepiej od uśrednionego użytkownika witryny</h2> <!--Nie pokażuj tego jeżeli ma mniej-->
+                        <h2>Od razu widać, że TREE(3) jest dużo większa od TREE(2) i TREE(1). Ale o ile większe?</h2>
+                        <h2>Kliknij aby poznać wartość TREE(3)</h2>
+                        <h2>Ładowanie ... [BŁĄD!]</h2>
+                        <h2>Prawda jest taka, że TREE(3) jest nie wyobrażalnie duże. Nie jest nawet możliwym wyświetlenie jednego procenta jednej milionowej jednej trillionowej częśći TREE(3) na ekranie</h2>
+                        <h2>Może zrodzić się pytanie czy TREE(3) nie jest przypadkiem nieskończone. Opierając się na pracy Kruskala, TREE(3) jest z całą pewnością liczbą skończoną.</h2>
+                        <h2>Niestety nie mam wystarczających kwalifikacjii na uduwodnienie tezy Kruskala, ale również po co wynajdywać koło na nowo? <a action="/blank" href="https://www.researchgate.net/publication/352225602_Simplified_Proof_of_Kruskal%27s_Tree_Theorem">Pod tym linkiem</a> można znaleźć pracę udowadniającą tezę Kruskala</h2>
+                        <h3>BUTTON</h3>
                     </div>
                     <div id="tMain5" class="tSlideMain">
-                        ABC BLABLA TESKT 5 <br>
-                        Lorem ipsum dolor sit amet consectetur.
+                        <h1>TREE(3), porównanie wielkości</h1>
+                        <h2>Aby zobrazować jak duże jest TREE(3), Po prawej stronie ekranu wyświetlę pasek w którym procent zapełnienia będzie obrazował wartość procentową z funckji F(x)=x/TREE(3). Do x co sekundę będę dodawał trillion milliardów do potęgi qintiliona i wyświetlał wynik</h2>
+                        <h2>CZKEAJ 4 SEKUNDY</h2>
+                        <h2>Strona działa poprawnie. Nawet inkrementacja x co sekundę o 10<sup>21 000 000 000 000 000 000</sup> nie spowoduje widocznej zmian na pasku w tym stuleciu, a nawet w czasie w jakim słońce będzie dalej na niebie.</h2>
+                        <h2>Dodając nawet liczbę Grahmana[dodaj przypisek] co nanosekundę do x, nie zobaczymy widocznej zmiany na pasku.</h2>
+                        <h2>Innym dobrym przykładem na zoobrazowanie jak duża jest to liczba, wyobraźmy sobię, że istnieje kartka papieru wielkości całego obserwalnego wszeświata. Na tej kartce będą napisane po kolei liczby TREE(3) o wielkości jednego atomu. Taka kartka nie była by w stanie pomieścić pełnego wyniku TREE(3).</h2>
+                        <h2>Teraz sobie wyobraźmy, że każdy atom w naszym obserwalnym wszechświecie będzie kieszonkowym wszechświatem zawierającym poprzedni wszechświat z kartką. Łączna powierzchnia tej kartki dalej by była zdecydowanie za mała, aby pomieścić pełną liczbę TREE(3)</h2>
+                        <h2>Taką rekuręcję można prowadzić milliard razy, a dalej nie można by było zapisać pełnego TREE(3)</h2>
+
                     </div>
                     <div id="tMain6" class="tSlideMain">
                         ABC BLABLA TESKT 6 <br>
@@ -86,6 +124,11 @@
                 </div>
             </div>
             <div class="col-2">
+                <div id="treePasek">
+                    <div>100%</div>
+                    <div style="position: absolute; bottom: 0%;">0%</div>
+                </div>
+
                 <div class="credits">
                         Autorzy strony: <hr> Kacper Dyduch <br> Małgorzata Stadnicka 
                 </div>
@@ -93,6 +136,7 @@
         </div>
     </div>
 
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
