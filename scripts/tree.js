@@ -3,9 +3,11 @@ var numberOfSlides = 6 //jeżeli coś się spierdoli po dodaniu nowych slajdów 
 
 $( document ).ready(function() {
     console.log("jquery rready")
+
+    
     
     InfoRowInitialize();
-    DisplayCurrSlide(5)
+    DisplayCurrSlide(0)
     SpawnTrees()
 });
 
@@ -30,15 +32,21 @@ function SpawnTrees(){
             }else{
                 $(this).append('<img src="img/tree/'+markUps[i]+'.png" alt="">')
             }
-        }
-
-        console.log($(this).html())
+        }        
     });
 }
 //<img src="img/tree/"++".png" alt=""><img src="img/tree/sB.png" alt=""><img src="img/tree/lE.png" alt=""><br>
 
 
+ScInp = $("#scoreImput")
 
+function CompareScore(){
+    if(ScInp.val() > 8.3){
+        $("#congratulations").css({
+            display: "inline"
+        })
+    }
+}
 
 
 
@@ -59,18 +67,26 @@ function InfoRowInitialize(){
     const RHist = new InfoRow("TREE3 - historia", 6)
 
     $(".tInfoRow").on("click", ChangeSlide)
+
+    for(i = 0 ; i <= numberOfSlides; ++i){
+        $("#tRow"+i+"").css({
+            display: "none"  
+        })
+    }
 }
 
 function ChangeSlide(){
-    console.log($(this).attr('id'));
+   
     
 
-    $("#tArrow"+$(this).attr('id').replace("tRow","")).css("color", "lime")
+    $("#tArrow"+$(this).attr('id').replace("tRow","")).css("color", "lime") //NIE PRZEJMUJ SIĘ BŁĘDEM BO DZIAŁA I TAK ^^
     
     DisplayCurrSlide($(this).attr('id').replace("tRow",""))
 
     
 }
+
+
 
 function DisplayCurrSlide(toShow){
     for(i = 0; i <= numberOfSlides; ++i){
@@ -79,6 +95,19 @@ function DisplayCurrSlide(toShow){
             opacity: "0%"
         })
     }
+    console.log(toShow)
+    
+    $("#tRow" + toShow + "").css({
+        display: "inline"
+    })
+    
+    $("#tRow" + (parseInt(toShow)+1) + "").css({
+        display: "inline"
+    })
+
+
+    
+
     $("#tMain"+toShow).css({
         display: "inline"
     })
