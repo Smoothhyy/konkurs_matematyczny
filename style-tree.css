@@ -27,7 +27,7 @@
     background-color: var(--main-color-op);
 }
 .tMainSection{
-    background: var(--sec-color-op);
+    
     color: var(--font-color);
     padding: 1rem;
 }
@@ -104,6 +104,12 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+#welcomeText{
+    font-family: var(--font-body);
+    font-family: var(--fancy-font);
+    color: var(--heading-color);
+}
+
 .tSlideMain{
     display:none;
     font-family: var(--font-body);
@@ -137,4 +143,67 @@ img{
     position: absolute;
     z-index: -1;
     width: 100%;
+}
+div[class^='tMain'], div[class*=' tMain']{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#buttonChangeLeft{
+    font-size: 3vw;
+    color:whitesmoke;
+    
+    position: absolute;
+    top:50%;
+    left:0%;
+
+    user-select: none;
+    cursor:pointer;
+}
+#buttonChangeRight{
+    font-size: 3vw;
+    color:whitesmoke;
+    
+    position: absolute;
+    top:50%;
+    right:0%;
+
+    user-select: none;
+    cursor:pointer;
+}
+
+#animationLoading{
+    opacity: 0%;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#M5I2{
+    opacity: 0%;
+}
+
+.zapraszam{
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    float:right;
+}
+
+.clickToShow{
+    color: lightblue;
+    text-decoration: underline;
+    user-select: none;
+    cursor: pointer;
+}
+
+#teoriaKrusala{
+    opacity: 0%;
+}
+
+h1{
+    letter-spacing: 3px;
+    padding-bottom: 10%;
+}
+
+input{
+    max-width: 4vw;
 }

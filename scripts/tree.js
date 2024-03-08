@@ -1,6 +1,6 @@
 InfoRowCont = $(".tInfoRowContainer")
 var numberOfSlides = 6 //jeżeli coś się spierdoli po dodaniu nowych slajdów to zmień to < i pamiętaj żeby index w klasach był niepowtarzalny
-
+let currMetaSlide = 0;
 $( document ).ready(function() {
     /* console.log */("jquery rready")
 
@@ -9,6 +9,8 @@ $( document ).ready(function() {
     InfoRowInitialize();
     DisplayCurrSlide(0)
     SpawnTrees()
+
+    
 });
 
 
@@ -46,19 +48,49 @@ function CompareScore(){
             display: "inline"
         })
     }
+
+    $("#M4I1").append("<br>Wynik wysłany! Na następnej stronie będziesz, mógł/mogła porównać swój wynik z średnią użytkowników.")
 }
 
 
 
 pasek =$("#treePasek") //tak wiem, głupie. Ale lepiej mi się tak organizować
-function DisplayPasek(){
-    PopIn(pasek);
+function DisplayPasek(ifShow){
+    if(ifShow){
+        PopIn(pasek);
+    }else{
+        pasek.css("opacity", "0%")
+    }
 }
 
 function ChangeBackground(imageUrl){
     $("#pseudoBackground").append('<img id="imgBackground" src="img/tree/backgrounds/BGspace.jpg" class="img-fluid" alt="">')
 }
 
+function playLoadingAnim(){
+    
+    PopIn($("#animationLoading"))
+    $("#animationLoading").animate({
+        color: "black"
+    }, 1000, function(){
+        $("#animationLoading").append(" . ")
+        $("#animationLoading").animate({
+            color: "black"
+        }, 1000, function(){
+            $("#animationLoading").append(" . ")
+            $("#animationLoading").animate({
+                color: "black"
+            }, 1000, function(){
+                $("#animationLoading").append(" . ")
+                $("#animationLoading").animate({
+                    color: "black"
+                }, 1000, function(){
+                    $("#animationLoading").append("<span style='color: red;'>BŁĄD!</span>")
+                })
+            })
+        })
+    })
+}
 
 
 /* -- START SKOPIUJ TO DO INNYCH START -- */
@@ -68,36 +100,75 @@ function PopIn(element){
     }, 500)
 }
 
+let nSlidesLookup = [0, 5, 8, 5, 3, 6]
+let interCount = 1
+function InternalSlideUpdate(direction){
+    if(direction == "r"){
+        if(interCount != nSlidesLookup[currMetaSlide]){
+            interCount++;
+        }
+    }else if(direction == "l"){
+        if(interCount != 1){
+            interCount--;
+        }
+    }
+    if(interCount == 1){
+        $("#buttonChangeLeft").css("opacity", "0%")
+    }else{
+        $("#buttonChangeLeft").css("opacity", "100%")
+    }
+    if(interCount == nSlidesLookup[currMetaSlide]){
+        $("#buttonChangeRight").css("opacity", "0%")
+    }else{
+        $("#buttonChangeRight").css("opacity", "100%")
+    }
 
-function InfoRowInitialize(){
-    const RczymJest = new InfoRow("Czym jest TREE3", 1)
-    const RprosteWyt = new InfoRow("Proste wytłumaczenie", 2)
-    const RtreePrz = new InfoRow("TREE1 i TREE2", 3)
-    const RJakDuze = new InfoRow("Jak duże jest TREE3", 4)
-    const RPoro = new InfoRow("Porównanie wielkości", 5)
-    const RHist = new InfoRow("Zakończenie", 6)
+    console.log("interCout : " + interCount)
 
-    $(".tInfoRow").on("click", ChangeSlide)
+    
+    for(var i = 0; i<20; i++){
+        $("#M"+currMetaSlide+"I"+i+"").css("display", "none") 
+    }
+    $("#M"+currMetaSlide+"I"+interCount+"").css("display", "inline")
 
-    for(i = 0 ; i <= numberOfSlides; ++i){
-        $("#tRow"+i+"").css({
-            display: "none"  
+    if(currMetaSlide == 5 && interCount ==2){
+        DisplayPasek(true)
+        $("#M5I2").animate({
+            color: "black"
+        }, 3500, function(){
+            PopIn($("#M5I2"))
         })
     }
 }
 
 
-function ChangeSlide(){
-   
-    
+
+
+
+function ChangeSlide(ifStart){
+    if(ifStart == true){
+        //jak to usunie to przestaje działać. Jestem kurwa zmęczony nie wiem co się dzieje
+    }
+    if(ifStart == true){
+        currMetaSlide = 1;
+    }
+
+    $("#welcomeText").css("display", "none")
+    currMetaSlide = $(this).attr('id').replace("tRow","");
+    interCount = 1;
+    if(currMetaSlide == 6){
+        DisplayPasek(false)
+    }
+    InternalSlideUpdate("");
 
     $("#tArrow"+$(this).attr('id').replace("tRow","")).css("color", "lime") //NIE PRZEJMUJ SIĘ BŁĘDEM BO DZIAŁA I TAK ^w^
     $("#tInfoContent"+$(this).attr('id').replace("tRow","")).css("color", "lime") /* okej, to tez dziala xd */
     console.log(this);
     
     DisplayCurrSlide($(this).attr('id').replace("tRow",""))
-
     UpdateTitle($(this).text());
+
+    
 }
 
 function UpdateTitle(newTitle){
@@ -131,6 +202,23 @@ function DisplayCurrSlide(toShow){
         opacity: "100%"
     }, 500)
 
+}
+
+function InfoRowInitialize(){
+    const RczymJest = new InfoRow("Czym jest TREE3", 1)
+    const RprosteWyt = new InfoRow("Proste wytłumaczenie", 2)
+    const RtreePrz = new InfoRow("TREE1 i TREE2", 3)
+    const RJakDuze = new InfoRow("Jak duże jest TREE3", 4)
+    const RPoro = new InfoRow("Porównanie wielkości", 5)
+    const RHist = new InfoRow("Zakończenie", 6)
+
+    $(".tInfoRow").on("click", ChangeSlide)
+
+    for(i = 0 ; i <= numberOfSlides; ++i){
+        $("#tRow"+i+"").css({
+            display: "none"  
+        })
+    }
 }
 
 class InfoRow{
