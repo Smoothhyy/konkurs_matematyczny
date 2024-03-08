@@ -2,7 +2,7 @@ InfoRowCont = $(".tInfoRowContainer")
 var numberOfSlides = 6 //jeżeli coś się spierdoli po dodaniu nowych slajdów to zmień to < i pamiętaj żeby index w klasach był niepowtarzalny
 
 $( document ).ready(function() {
-    console.log("jquery rready")
+    /* console.log */("jquery rready")
 
     
     
@@ -92,6 +92,8 @@ function ChangeSlide(){
     
 
     $("#tArrow"+$(this).attr('id').replace("tRow","")).css("color", "lime") //NIE PRZEJMUJ SIĘ BŁĘDEM BO DZIAŁA I TAK ^w^
+    $("#tInfoContent"+$(this).attr('id').replace("tRow","")).css("color", "lime") /* okej, to tez dziala xd */
+    console.log(this);
     
     DisplayCurrSlide($(this).attr('id').replace("tRow",""))
 
@@ -109,7 +111,7 @@ function DisplayCurrSlide(toShow){
             opacity: "0%"
         })
     }
-    console.log(toShow)
+    /* console.log(toShow) */
     
     $("#tRow" + toShow + "").css({
         display: "inline"
@@ -135,7 +137,7 @@ class InfoRow{
     constructor(content, rowIndex){
         this.content = content;
         this.rowIndex = rowIndex;
-        this.actualhtml = "<hr><div id='tRow"+rowIndex+"' class='tInfoRow'><div class='tInfoRow'><div id='tArrow"+rowIndex+"' class='tInfoArrow'><i class='bi bi-caret-right-fill'></i></div><div class='tInfoContent'>"+content+"</div></div>";
+        this.actualhtml = "<hr><div id='tRow"+rowIndex+"' class='tInfoRow'><div class='tInfoRow'><div id='tArrow"+rowIndex+"' class='tInfoArrow'><i class='bi bi-caret-right-fill'></i></div><div class='tInfoContent' id='tInfoContent"+rowIndex+"'>"+content+"</div></div>";
 
         this.appentToInfo(this.actualhtml);
     }
