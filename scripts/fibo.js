@@ -8,92 +8,10 @@ $( document ).ready(function() {
     
     InfoRowInitialize();
     DisplayCurrSlide(0)
-    SpawnTrees()
-
     
 });
 
 
-
-tcon = $(".treeContainer")
-function SpawnTrees(){
-    tcon.each(function(index){
-        orginal = null;
-        orginal = $(this).html();
-        markUps = orginal.split(" ")
-        markUps = markUps.filter((word) => word != "")
-         
-        $(this).empty();
-        for(i = 0; i <= markUps.length; i++){
-            
-            if(markUps[i] == "ENDROW"){
-                $(this).append('<br>')
-            }else if(markUps[i] == "SPACE"){
-                $(this).append('<img src="img/tree/lE.png" alt="">')
-                $(this).append('<img src="img/tree/lE.png" alt="">')
-            }else{
-                $(this).append('<img src="img/tree/'+markUps[i]+'.png" alt="">')
-            }
-        }        
-    });
-}
-//<img src="img/tree/"++".png" alt=""><img src="img/tree/sB.png" alt=""><img src="img/tree/lE.png" alt=""><br>
-
-
-ScInp = $("#scoreImput")
-
-function CompareScore(){
-    if(ScInp.val() > 8.3){
-        $("#congratulations").css({
-            display: "inline"
-        })
-    }
-
-    $("#M4I1").append("<br>Wynik wysłany! Na następnej stronie będziesz, mógł/mogła porównać swój wynik z średnią użytkowników.")
-}
-
-
-
-pasek =$("#treePasek") //tak wiem, głupie. Ale lepiej mi się tak organizować
-function DisplayPasek(ifShow){
-    if(ifShow){
-        PopIn(pasek);
-    }else{
-        pasek.css("opacity", "0%")
-    }
-}
-
-function ChangeBackground(imageUrl){
-    $("#pseudoBackground").append('<img id="imgBackground" src="img/tree/backgrounds/BGspace.jpg" class="img-fluid" alt="">')
-}
-
-function playLoadingAnim(){
-    
-    PopIn($("#animationLoading"))
-    $("#animationLoading").animate({
-        color: "black"
-    }, 1000, function(){
-        $("#animationLoading").append(" . ")
-        $("#animationLoading").animate({
-            color: "black"
-        }, 1000, function(){
-            $("#animationLoading").append(" . ")
-            $("#animationLoading").animate({
-                color: "black"
-            }, 1000, function(){
-                $("#animationLoading").append(" . ")
-                $("#animationLoading").animate({
-                    color: "black"
-                }, 1000, function(){
-                    $("#animationLoading").append("<span style='color: red;'>BŁĄD!</span>")
-                })
-            })
-        })
-    })
-}
-
-
-/* -- START SKOPIUJ TO DO INNYCH START -- */
 function PopIn(element){
     element.animate({
         opacity: "100%"
@@ -131,14 +49,6 @@ function InternalSlideUpdate(direction){
     }
     $("#M"+currMetaSlide+"I"+interCount+"").css("display", "inline")
 
-    if(currMetaSlide == 5 && interCount ==2){
-        DisplayPasek(true)
-        $("#M5I2").animate({
-            color: "black"
-        }, 3500, function(){
-            PopIn($("#M5I2"))
-        })
-    }
 }
 
 
@@ -156,9 +66,7 @@ function ChangeSlide(ifStart){
     $("#welcomeText").css("display", "none")
     currMetaSlide = $(this).attr('id').replace("tRow","");
     interCount = 1;
-    if(currMetaSlide == 6){
-        DisplayPasek(false)
-    }
+    
     InternalSlideUpdate("");
 
     $("#tArrow"+$(this).attr('id').replace("tRow","")).css("color", "lime") //NIE PRZEJMUJ SIĘ BŁĘDEM BO DZIAŁA I TAK ^w^
@@ -172,7 +80,7 @@ function ChangeSlide(ifStart){
 }
 
 function UpdateTitle(newTitle){
-    $(document).attr("title", "TREE(3) - " + newTitle);
+    $(document).attr("title", "" + newTitle);
 }
 
 function DisplayCurrSlide(toShow){
@@ -205,11 +113,11 @@ function DisplayCurrSlide(toShow){
 }
 
 function InfoRowInitialize(){
-    const RczymJest = new InfoRow("Czym jest TREE3", 1)
+    const RczymJest = new InfoRow("Czym jest ciąg fibonacciego?", 1)
     const RprosteWyt = new InfoRow("Proste wytłumaczenie", 2)
-    const RtreePrz = new InfoRow("TREE1 i TREE2", 3)
-    const RJakDuze = new InfoRow("Jak duże jest TREE3", 4)
-    const RPoro = new InfoRow("Porównanie wielkości", 5)
+    const RtreePrz = new InfoRow("Złoty podział", 3)
+    const RJakDuze = new InfoRow("Ciąg Fibonacciego w naturze", 4)
+    const RPoro = new InfoRow("Ciąg Fibonacciego w innych miejscach", 5)
     const RHist = new InfoRow("Zakończenie", 6)
 
     $(".tInfoRow").on("click", ChangeSlide)
@@ -233,4 +141,3 @@ class InfoRow{
         InfoRowCont.append(jqCont)
     }
 }
-/* -- END SKOPIUJ TO DO INNYCH END -- */
