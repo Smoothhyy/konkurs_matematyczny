@@ -186,7 +186,7 @@ div[class^='tMain'], div[class*=' tMain']{
 .zapraszam{
     position: absolute;
     bottom: 10%;
-    right: 5%;
+    right: 7%;
     float:right;
 }
 
@@ -214,4 +214,15 @@ input{
     color:goldenrod;
     font-weight: 600;
     letter-spacing: 1px;
+}
+
+.codeBlock{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    
+    font-size: 1rem;
+    font-weight: 800;
+    align-self: baseline;
+    font-family: 'Courier New', Courier, monospace;
 }

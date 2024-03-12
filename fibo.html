@@ -59,7 +59,6 @@
                             <h4><br></h4>
                             <h4>Więc, F(1) = 0, F(2) = 1, F(3) = 1 F(4) = 2 i tak dalej..</h4>
                             <h4>Niektórzy w swoich publikacjach za F(1) dają 1 zamiast zera: <br> <span class="FNumbers">1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 . . .</span></h4>
-                            <h4>Można zadać sobie pytanie, co wyróżnia ciąg Fibonacciego spośród innych ciągów? Między innymi to, że róznica dwóch kolejnych wyrazów ciągu, dąży do złotego podziału.</h4>
                         </div>
                         <div id="M1I4">
                             <h4>Znając już zasady tworzenia ciągu, zapszam do uzupełnienia tych prostych przykładów:</h4>
@@ -80,11 +79,74 @@
                             </div>
                             <a id="checkAnswers" href="#" onclick="CheckAnswers()">Sprawdź Odpowiedzi</a>
                         </div>
-                        <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
+                        <div id="M1I5">
+                            <h4>Przez swoją prostotę i specifikację ciągu Fibonacciego, często jest używany jako jedno z podstawowych zadań przy nauce programowania.</h4>
+                            <h4>
+                                <div class="codeBlock">
+                                    function Fibonacci(n) { <br>
+                                    &nbsp;    if(n < 2) return n; <br>
+                                    &nbsp;    return (Fibonacci(n - 1) + Fibonacci(n - 2)); <br>
+                                    }
+                                </div>
+                                <h5>Skrypt generujący kolejne wyrazy ciągu użyty na tej stronie. Skrypt opiera się na metodzie rekurencyjnej.</h5>
+                            </h4>
+                            
+                        </div>
+                        <div id="M1I6">
+                            <h5>Skrypt generujący kolejne wyrazy ciągu napisany w Assembly. Opracowany przez Michael'a Petch'a</h5>
+                            <h4>
+                                <div class="codeBlock">
+                                .586 <br>
+                                .MODEL FLAT <br>
+                                INCLUDE io.h         <br>
+                                .STACK 4096 <br>
+
+
+                                .DATA <br>
+
+                                resultLbl BYTE  "The result is", 0 <br>
+                                sum     BYTE    11 DUP (?), 0 <br>
+
+                                .CODE <br>
+                                _MainProc PROC <br>
+
+                                &nbsp;    mov eax,1 <br>
+                                &nbsp;    mov ebx,1 <br>
+                                &nbsp;    dtoa  sum , eax <br>
+                                &nbsp;    output resultLbl , sum <br>
+                                &nbsp;    dtoa sum ,ebx  <br>
+                                &nbsp;    output  resultLbl ,sum <br>
+                                &nbsp;    mov ecx ,5 <br>
+                                _for: <br>
+                                &nbsp;    mov edx , eax <br>
+                                &nbsp;    add edx , ebx <br>
+                                &nbsp;    dtoa sum ,edx <br>
+                                &nbsp;    output  resultLbl ,sum <br>
+                                &nbsp;    mov  eax ,ebx <br>
+                                &nbsp;    mov  ebx ,edx <br>
+                                &nbsp;    dec ecx <br>
+                                &nbsp;    cmp ecx , 0 <br>
+                                &nbsp;    jne _for <br>
+                                &nbsp;    mov eax , 0 <br>
+                                &nbsp;    ret <br>
+
+
+                                _MainProc ENDP <br>
+                                END  <br>
+                                </div>
+                            </h4>
+                            <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
+                        </div>
                     </div>
                     <div id="tMain2" class="tSlideMain">
                         <h1>Złoty Podział</h1>
-                        
+                        <div id="M2M1">
+                            <h4>Jeżeli podzielimy przez na przykład 12 wyraz ciągu:<span class="FIBO">12</span> i 11 wyraz ciągu:<span class="FIBO">11</span> otrzymamy 1.61797...</h4>
+                            <h4>Jeżeli z kolei podzielimy na przykład 20 wyraz ciągu przez 19 wyraz, otrzymamy 1.618033963...</h4>
+                            <h4>Widzimy, że dzieląc przez siebie coraz większe wyrazy ciągu, otrzymujemy ułamek, który dąży do pewnej wartości. Tą wartością jest Phi, lepiej znana jako złoty podział</h4>
+                            <h4>Możemy powiedzieć, że <img style="width: 25%" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c97c57b45024325087cc20cbfd9af27fc6c5a5bf" alt=""></h4>
+                            <h4>Iroraz kolejnych wyrazów ciągu dąży do złotego podziału, czyli &phi;</h4>
+                        </div>
                     </div>
                     <div id="tMain3" class="tSlideMain">
                         <h1>TREE(1) I TREE(2)</h1>

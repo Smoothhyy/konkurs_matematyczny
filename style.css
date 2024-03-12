@@ -146,3 +146,29 @@ main .tile-container .tile:hover{
         text-shadow: 0px 0px 10px snow;
     }
     
+
+.credits{
+    color: white;
+    padding: 1rem;
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 1rem;
+    font-weight: 800;
+    align-self: baseline;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.disclaimer{
+    color: white;
+    padding: 1rem;
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-size: 1rem;
+    font-weight: 800;
+    align-self: baseline;
+    font-family: 'Courier New', Courier, monospace;
+}
