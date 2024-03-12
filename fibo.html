@@ -44,137 +44,66 @@
                     <div id="pseudoBackground"> 
                     </div>
                     <div id="tMain1" class="tSlideMain">
-                        <h1>Czym jest TREE(3)</h1>
+                        <h1>Czym jest Ciąg Fibonacciego?</h1>
                         <div id="M1I1">
-                            <h2>TREE(3) jest funkcją zawartą w <span class="clickToShow" onclick="PopIn($('#teoriaKrusala'))">teorii drzew Kruskala (kliknij aby pokazać)</span>.</h2>
-                            <h4 id="teoriaKrusala">Teoria drzew Kruskala to problem w matematyce dotyczący grafów i porządku, który mówi, że skończony zbiór drzew utworzonych z określonych reguł jest w zasadzie taki sam. Oznacza to, że mogą być one przekształcone w siebie nawzajem bez zmiany ich istoty. Twierdzenie to zostało początkowo przedstawione przez Andrew Vázsonyiego, węgierskiego matematyka, a potem udowodnione przez Josepha Kruskala i Nasha-Williamsa. To jest ważne, ponieważ stanowi przykład problemu, który nie może być rozwiązany za pomocą pewnych metod matematycznych, co prowadzi do konstrukcji bardzo szybko rosnących funkcji, takich jak funkcja TREE(n).</h4>
+                            <h4>Na tej stronie przyjrzymy się jednemu z najbardziej fascynujących i powszechnie znanych ciągów w matematyce - Ciągowi Fibonacciego. Nazwa ta może brzmieć tajemniczo, ale jego zasady są proste, a jego wpływ na wiele dziedzin jest ogromny.</h4>
+                            <img style="padding-top: 70px; width: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Fibonacci.jpg" alt=""> 
+                            <h5>Fibonacci na rycinie z I benefattori dell'umanità</h5>
                         </div>
-                        <h2 id="M1I2">Jakie są zasady funkcji TREE(n)?</h2>
+                        <div id="M1I2">
+                            <h4>Ciąg Fibonacciego, to ciąg liczb naturalnych określony rekurecyjnie w sposób następujący: <br> Pierwszy wyraz ciągu jest równy 0, a drugi 1. Każdy następny wyraz jest sumą dwóch poprzednich </h4>
+                            <h4>Można to zapisać jako: <img style="width: 50%; color:white" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ea9dac862682a4bca20322cdf6e62a3924a00732" alt=""></h4>
+                        </div>
                         <div id="M1I3">
-                            <h2>Zasady funkcji TREE(n). (Metoda Crispin'a Nash-Williams'a)</h2>
-                            <h2>Dla danego drzewa <span class="mSS">T</span>  z korzeniem (głównym punktem tworzącym drzewo) oraz danymi wierzchołkami <span class="mSS">v</span> , <span class="mSS">w</span> mówimy, że <span class="mSS">w</span> jest odgałęzieniem <span class="mSS">v</span> , oznacza to, iż istnieje bezpośrednie połączenie z <span class="mSS">w</span> do <span class="mSS">v</span> , lub pośrednie takie, że każdy kolejny punkt na ścieżce ma bezpośrednie połączenie z jednym z dwóch wierzchołków. </h2>
+                            <h4>Ciąg więc będzie wyglądał następująco: <br> <span class="FNumbers">0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 . . .</span></h4>
+                            <h4><br></h4>
+                            <h4>Więc, F(1) = 0, F(2) = 1, F(3) = 1 F(4) = 2 i tak dalej..</h4>
+                            <h4>Niektórzy w swoich publikacjach za F(1) dają 1 zamiast zera: <br> <span class="FNumbers">1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 . . .</span></h4>
+                            <h4>Można zadać sobie pytanie, co wyróżnia ciąg Fibonacciego spośród innych ciągów? Między innymi to, że róznica dwóch kolejnych wyrazów ciągu, dąży do złotego podziału.</h4>
                         </div>
-                        <h2 id="M1I4">Jeżeli drzewa <span class="mSS">T<sub>1</sub></span> , <span class="mSS">T<sub>2</sub></span> są połączone ze sobą w <span class="mSS">X</span> , to mówimy, że <span class="mSS">T<sub>1</sub></span> jest zawarte w <span class="mSS">T<sub>2</sub></span> i piszemy <span class="mSS">T<sub>1</sub></span> ⩽ <span class="mSS">T<sub>2</sub></span> . Jest to działanie, które należy opóźnić, tzn. konstruować drzewa w taki sposób, aby <span class="mSS">T<sub>1</sub></span> ⩽ <span class="mSS">T<sub>2</sub></span> , wystąpiło możliwie na końcu. Kruskal udowodnił, iż konstrukcja drzew musi w pewnym momencie spełnić warunek <span class="mSS">T<sub>1</sub></span> ⩽ <span class="mSS">T<sub>2</sub></span> , można więc zapisać, że ∀ <span class="mSS">T</span> : <span class="mSS">T<sub>1</sub></span> ⩽ <span class="mSS">T<sub>2</sub></span>(to oznacza, że dla każdego elementu <span class="mSS">T</span>, <span class="mSS">T<sub>1</sub></span> jest zawarte w <span class="mSS">T<sub>2</sub></span> ) . </h2>
-                        <div id="M1I5">
-                            <h2>Załóżmy, że <span class="mSS">P(n)</span> spełnia warunek ∀ <span class="mSS">T</span> : <span class="mSS">T<sub>1</sub></span> ⩽ <span class="mSS">T<sub>2</sub></span> , czyli <span class="mSS">n</span> ∈ <span class="mSS">N<sup>+</sup></span>, oraz że drzewo na pozycji <span class="mSS">k</span> może mieć maksymalnie <span class="mSS">k</span> punktów. TREE(3) jest maksymalną liczbą drzew możliwych do skonstruowania, bez zawierania jednego drzewa w drugim z użyciem <span class="mSS">n</span> kolorów.</h2>
-                            <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
+                        <div id="M1I4">
+                            <h4>Znając już zasady tworzenia ciągu, zapszam do uzupełnienia tych prostych przykładów:</h4>
+                            <div class="FPrzyklad" id="Z1">
+                                F(11) = <span class="FIBO">11</span> <br>
+                                F(12) = <span class="FIBO">12</span> <br>
+                                F(13) = <input id="zad1" type="number"> <br>
+                            </div>
+                            <div class="FPrzyklad" id="Z2">
+                                F(14) = <span class="FIBO">14</span> <br>
+                                F(15) = <span class="FIBO">15</span> <br>
+                                F(16) = <input id="zad2" type="number"> <br>
+                            </div>
+                            <div class="FPrzyklad" id="Z3">
+                                F(17) = <span class="FIBO">17</span> <br>
+                                F(18) = <span class="FIBO">18</span> <br>
+                                F(19) = <input id="zad3" type="number"> <br>
+                            </div>
+                            <a id="checkAnswers" href="#" onclick="CheckAnswers()">Sprawdź Odpowiedzi</a>
                         </div>
+                        <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
                     </div>
                     <div id="tMain2" class="tSlideMain">
-                        <h1>TREE(3) - proste wytłumaczenie</h1>
-                        <h2 id="M2I1">Załóżmy że mamy 3 nasiona: czerwone, zielone i niebieskie. Będą one reprezentować wierzchołki znajdujące się w danym drzewie</h2>
-                        <h2 id="M2I2">Drzewo w TREE(1) może mieć maksymalnie jeden kolor nasiona, drzewa w TREE(2) mogą mieć maksymalnie 2 różne kolory nasion, drzewa TREE(3) mogą mieć maksymalnie 3 różne kolory nasion i tak dalej...</h2>
-                        <h2 id="M2I3">Zasada jest prosta, TREE(n) może mieć maksymalnie n różno kolorowych nasion</h2>
-                        <h2 id="M2I4">Kolejną zasadą jest to, że w momencie, w którym stworzymy drzewo, które mogło by być zawarte w poprzednim drzewie, "gra" się kończy.</h2>
-                            <div id="M2I5">
-                                <h2>Co rozumiemy porzez zawarte? Posłużmy się przykładmi: </h2>
-                            
-                                <div class="treeContainer">sR lE sG SPACE sR lE sG ENDROW lRT sB lLT SPACE lRT sB lLT ENDROW lE lS lE ENDROW lE sB lE ENDROW tA SPACE SPACE tB
-                                </div>
-                                <h2>Jak widzimy, drzewo B jest zawarte w drzewie A, ponieważ nasiono czerwone i nasiono zielone w drzewie B wywodzą się z nasiona niebieskiego, co odpowiada budowie drzewu A. W tym momencie "gra" się kończy.</h2>
-                            </div>
-                            <div id="M2I6">
-                                <div class="treeContainer">sR lE sG SPACE sR lE sG ENDROW lRT sB lLT SPACE lRT sR lLT ENDROW lE lS lE ENDROW lE sB lE ENDROW tA SPACE SPACE tB
-                                </div><br>
-                                <h2> W tym wypadku, po zmianie koloru jednego z nasion, "gra" nadal trwa, ponieważ żaden zbiór nasion nie jest zawarty w poprzednim drzewie.</h2>
-                            </div>
-                            <div id="M2I7">
-                                <div class="treeContainer"> sG lE sR SPACE sG lE sR ENDROW lRT sB lLT SPACE lRT sG lLT ENDROW lE lS ENDROW lE sR lE ENDROW tA SPACE SPACE tB
-                                </div>
-                                <h2>Kolejny przykład drzew, które by nie spowodobały zakończenia "gry". </h2>
-                            </div>
-                            <div id="M2I8">
-                                <div class="treeContainer"> sG lE sR SPACE sG lE sB lE lE sR ENDROW lRT sG lLT SPACE lRT sB lLT lE sB lLT ENDROW lE SPACE SPACE lE lRT lH sG lLT ENDROW tA SPACE SPACE tB
-                                </div>
-                                <h2>Mimo, że na pierwszy rzut oka, może się wydawać że drzewo B nie zawiera drzewa A, jest tak. Powodem tego jest fakt, że najbliższym wspólnym punktem gałęzi zielonych i czerwonych jest gałąź zielona, co odpowiada budowie drzewa A.</h2>
-                                <h2><br></h2>
-                                <h2>Ostatnią zasadą w tej "grze" jest to, że pierwsze drzewo jakie stworzymy, nie może mieć więcej niż jedno nasiono. Drugie nie może mieć więcej niż dwa nasiona. Trzecie nie może mieć więcej niż 3 nasiona i tak dalej.</h2>
-                                <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
-                            </div>
+                        <h1>Złoty Podział</h1>
+                        
                     </div>
                     <div id="tMain3" class="tSlideMain">
                         <h1>TREE(1) I TREE(2)</h1>
-                        <div id="M3I1">
-                            <h2>Znając wszystkie zasady, zagrajmy teraz w grę.</h2>
-                        </div>
-                        <div id="M3I2">
-                            <h2>TREE(1), jak definicja wskazuje, może zawierać maksymalnie tylko jedno jednokolorowe nasiono. Wybierzmy niebieskie.</h2>
-                            <div class="treeContainer"> sB
-                            </div>
-                        </div>
-                        <div id="M3I3">
-                            <h2 >I.. na tym nasza gra się kończy. Nie możemy dodać następnego niebieskiego nasiona, lub dwóch połączonych niebieskich nasion ponieważ kolejne drzewo zostałoby zawarte w pierwszym drzewie.</h2>
-                            <div class="treeContainer"> sB SPACE sB ENDROW tA SPACE tB 
-                            </div>
-                            <div class="treeContainer"> lE SPACE sB ENDROW lE SPACE lS ENDROW sB SPACE sB ENDROW tA SPACE tB 
-                            </div>
-                            <h2>Drzewo B jest dość przejżyście zawarte w drzewie B nie ważne, czy damy dwa czy jedno nasiono, wiec wartość TREE(1) jest równa 1, ponieważ możemy stworzyć tylko jedno drzewo. Innaczej mówiąc; TREE(1) = 1.</h2>
-                        </div>
-                        <div id="M3I4">
-                            <h2>Spróbujmy teraz zagrać w grę TREE(2)</h2>
-                            <h2>Na początku możemy stworzyć nasiono niebieskie: </h2>
-                            <div class="treeContainer"> sB ENDROW tA
-                            </div>
-                            <h2>I dodać nasiono innego koloru, wybierzmy zielone</h2>
-                            <div class="treeContainer"> sB SPACE sG ENDROW tA SPACE tB
-                            </div>
-                            <h2>Mogło by się wydawać, że nie ważne jakie drzewo damy następne, będzie ono zawarte w drzewie A lub B i jest to prawda. Nie jest to jednak najdłuższa gra jaka może zostać zagrana.</h2>
-                        </div>
-                        <div id="M3I5">
-                            <div class="treeContainer"> lE SPACE sG ENDROW lE SPACE lS ENDROW sB SPACE sG  SPACE sG ENDROW tA SPACE tB SPACE tC 
-                            </div>
-                            <h2>Oto najdłuższa gra TREE(2), jaką możemy zagrać. Drzewo C nie zawiera drzewa A, ani drzewa B, więc TREE(2) = 3</h2>
-                            <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
-                        </div>
+                        
                     </div>
                     <div id="tMain4" class="tSlideMain">
                         <h1>TREE(3)</h1>
-                        <div id="M4I1">
-                            <h2>Zachęcam Ciebie, użytkowniku strony, aby spróbować zagrać w grę TREE(3) i wpisać swój wynik: <br><input id="scoreImput" type="number" min="1" max="99"> <span class="clickToShow" onclick="CompareScore()">Wyślij wynik</span></h2>
-                            <h2>Dla przypomnienia zasad: odwiedź rozdział "Prote wytłumaczenie".</h2>
-                        </div>
-                        <div id="M4I2">
-                            <h2>Średni wynik użytkownika: 6.3</h2> <!--Jakby co to to jest po prostu liczba jaką wymyśliłem. Nie chce mi się pierdolić z implementacją zczytywania i zapisywania wartości w żaden sposób-->
-                            <h2 id="congratulations">Zagrałeś lepiej od uśrednionego użytkownika witryny!</h2> <!--Nie pokażuj tego jeżeli ma mniej-->
-                            <h2>Od razu widać, że TREE(3) jest dużo większa od TREE(2) i TREE(1). Ale o ile większe?</h2>
-                            <h2><span onclick="playLoadingAnim()" style="color: rgb(88, 88, 197); user-select: none; cursor:pointer;">Kliknij</span> aby poznać wartość TREE(3)</h2>
-                            <h2 id="animationLoading">Ładowanie</h2> <!-- huju muju animacja-->
-                        </div>
-                        <div id="M4I3">
-                            <h2>Prawda jest taka, że TREE(3) jest nie wyobrażalnie duże. Nie jest nawet możliwym wyświetlenie jednego procenta jednej milionowej jednej trillionowej częśći TREE(3) na ekranie.</h2>
-                            <h2>Może zrodzić się pytanie czy TREE(3) nie jest przypadkiem nieskończone. Opierając się na pracy Kruskala, TREE(3) jest z całą pewnością liczbą skończoną.</h2>
-                            <h2>Niestety nie mam wystarczających kwalifikacjii na uduwodnienie tezy Kruskala, ale również po co wynajdywać koło na nowo? <a target="_blank" href="https://www.researchgate.net/publication/352225602_Simplified_Proof_of_Kruskal%27s_Tree_Theorem">Pod tym linkiem</a> można znaleźć pracę udowadniającą tezę Kruskala</h2>
-                            <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
-                        </div>
+                        
                     </div>
                     <div id="tMain5" class="tSlideMain">
-                        <h1>TREE(3), porównanie wielkości</h1>
-                        <h2 id="M5I1">Aby zobrazować jak duże jest TREE(3), Po prawej stronie ekranu wyświetlę pasek w którym procent zapełnienia będzie obrazował wartość procentową z funckji <span class="mSS">F(x)=x/TREE(3)</span>. Do x co sekundę będę dodawał trillion milliardów do potęgi qintiliona i wyświetlał wynik.</h2>
-                        <h2 id="M5I2">Strona działa poprawnie. Nawet inkrementacja x co sekundę o 10<sup>21 000 000 000 000 000 000</sup> nie spowoduje widocznej zmian na pasku w tym stuleciu, a nawet w czasie w jakim słońce będzie dalej na niebie.</h2>
-                        <h2 id="M5I3">Dodając nawet liczbę <a target="_black" href="https://pl.wikipedia.org/wiki/Liczba_Grahama">Grahmana</a> co nanosekundę do x, nie zobaczymy widocznej zmiany na pasku.</h2>
-                        <h2 id="M5I4">Innym dobrym przykładem na zoobrazowanie jak duża jest to liczba, wyobraźmy sobię, że istnieje kartka papieru wielkości całego obserwalnego wszeświata. Na tej kartce będą napisane po kolei liczby TREE(3) o wielkości jednego atomu. Taka kartka nie była by w stanie pomieścić pełnego wyniku TREE(3).</h2>
-                        <h2 id="M5I5">Teraz sobie wyobraźmy, że każdy atom w naszym obserwalnym wszechświecie będzie kieszonkowym wszechświatem zawierającym poprzedni wszechświat z kartką. Łączna powierzchnia tej kartki dalej by była zdecydowanie za mała, aby pomieścić pełną liczbę TREE(3).</h2>
-                        <div id="M5I6">
-                            <h2>Taką rekuręcję można prowadzić milliard razy, a dalej nie można by było zapisać pełnego TREE(3).</h2>
-                            <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
-                        </div>
+                        
                     </div>
                     <div id="tMain6" class="tSlideMain">
-                        <h1>Zakończenie</h1>
-                        <h2 id="M6I1">Nie jest możliwym pojęcie skali TREE(3). Może zrodzić się pytanie: "Czy jest sens rozmawiać o takich liczbach?"</h2>
-                        <h2 id="M6I2">W mojej opini jak najbardziej. Mimo, że liczba Grahmana jest największą "urzyteczną" liczbą, uważam, że TREE(3) w swojej absolutnie poza jakimkolwiek pojęciem skali jest równie ciekawe, o ile nie bardziej.</h2>
-                        <h2 id="M6I3">Fakt, że na podstawie pozornie prostych zasad, jesteśmy w stanie stowrzyć koncept, który przewyższa nasze pojęcie jest czymś absolutnie fascynującym dla mnie. Mam nadzieję, że również Ciebie, użytkowniku witryny skłoniłem do głębszego pomyślunku na temat limitów ludzkiego umysłu.</h2>
-                        <h2 id="M6I4">Zachęcam również do spróbowania pograć sobie czasami w "grę drzew", jest to dość ciekawa jednoosobowa gra, którą można zagrać gdziekolwiek jeżeli się ma kartkę i 3 długopisy.</h2>
-                        <h2 id="M6I5">Na tym chciałbym zakończyć to krótkie omówienie TREE(3).</h2>
-                        <h4 class="zapraszam" id="M6I6">Zapraszam do odwiedzenia innych tematów z tej strony, które można wybrać po kliknięciu strzałki powrotu w lewym górnym rogu ekranu.</h4>
-                    </div>
+                    
+                    </div>  
                 </div>
             </div>
             <div class="col-2">
-                <div id="treePasek">
-                    <div>100%</div>
-                    <div style="position: absolute; bottom: 0%;">0%</div>
-                </div>
+                
 
                 <div class="credits">
                         Autorzy strony: <hr> Kacper Dyduch <br> Małgorzata Stadnicka 

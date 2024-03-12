@@ -9,7 +9,57 @@ $( document ).ready(function() {
     InfoRowInitialize();
     DisplayCurrSlide(0)
     
+    SpawnFibo()
 });
+
+function CheckAnswers(){
+    if($("#zad1").val() == Fibonacci(13)){
+        $("#Z1").append("⭐")
+    }else{
+        $("#Z1").append("Poprawna odpowiedź: " + Fibonacci(13))
+    }
+    if($("#zad2").val() == Fibonacci(16)){
+        $("#Z2").append("⭐")
+    }else{
+        $("#Z2").append("Poprawna odpowiedź: " + Fibonacci(16))
+    }
+    if($("#zad3").val() == Fibonacci(19)){
+        $("#Z3").append("⭐")
+    }else{
+        $("#Z3").append("Poprawna odpowiedź: " + Fibonacci(19))
+    }
+    $("#checkAnswers").css("display", "none")
+}
+
+
+function Fibonacci(n) {
+    
+    if(n < 2) return n;
+    return (Fibonacci(n - 1) + Fibonacci(n - 2));
+}
+
+
+fcon = $(".FIBO")
+function SpawnFibo(){
+    fcon.each(function(index){
+        orginal = null;
+        orginal = $(this).html();
+        markUps = orginal.split(" ")
+        markUps = markUps.filter((word) => word != "")
+         
+        $(this).empty();
+        $(this).append(Fibonacci(markUps))
+             
+    });
+}
+
+
+
+
+
+
+
+
 
 
 function PopIn(element){

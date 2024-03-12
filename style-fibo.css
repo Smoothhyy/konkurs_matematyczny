@@ -25,6 +25,8 @@
     display: flex;
     justify-content: center;
     background-color: var(--main-color-op);
+
+    height: 100vh;
 }
 .tMainSection{
     
@@ -205,5 +207,11 @@ h1{
 }
 
 input{
-    max-width: 4vw;
+    max-width: 6vw;
+}
+
+.FNumbers{
+    color:goldenrod;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
