@@ -140,17 +140,86 @@
                     </div>
                     <div id="tMain2" class="tSlideMain">
                         <h1>Złoty Podział</h1>
-                        <div id="M2M1">
+                        <div id="M2I1">
                             <h4>Jeżeli podzielimy przez na przykład 12 wyraz ciągu:<span class="FIBO">12</span> i 11 wyraz ciągu:<span class="FIBO">11</span> otrzymamy 1.61797...</h4>
                             <h4>Jeżeli z kolei podzielimy na przykład 20 wyraz ciągu przez 19 wyraz, otrzymamy 1.618033963...</h4>
                             <h4>Widzimy, że dzieląc przez siebie coraz większe wyrazy ciągu, otrzymujemy ułamek, który dąży do pewnej wartości. Tą wartością jest Phi, lepiej znana jako złoty podział</h4>
                             <h4>Możemy powiedzieć, że <img style="width: 25%" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c97c57b45024325087cc20cbfd9af27fc6c5a5bf" alt=""></h4>
                             <h4>Iroraz kolejnych wyrazów ciągu dąży do złotego podziału, czyli &phi;</h4>
                         </div>
+                        <div id="M2I2">
+                            <h4>&phi; orginalnie zostało zdefiniowane jako "Stosunek długości przekątnych w regularnym pięciokącie wypukłym do długości boków"</h4>
+                            <h4>Phi jest również jedyn z rozwiązań równiania x<sup>2</sup> = x + 1. Euclid z grecji nazywany Ojcem Współczesnej Geometrii uznał phi jako "ekstremalną i niegrzeczą liczbe", a Luca Bartolomeo de Pacioli nazwynay Ojcem Rachunkowości stwierdził, że phi jest "boską proporcją".</h4>
+                            <h4>Phi mimo swojej genezie w gemetrii, występuje również w malarstwie (gdzie jest uznawane jako "podstawa anatomii"), muzyce (w tak zwanym strojeniu Fibonacciego lub Złotym Strojeniu), w naturze (phi występuje w niektórych wzorcach w naturze takich jak rozmieszczenie liści) i w wielu innych, na pozór niepołączonych dziedzinach</h4>
+                            <h4>Skąd jednak &phi; występuje w tak wielu miejsach?</h4>
+                        </div>
+                        <div id="M2I3">
+                            <h4>Prawda jest taka, że większość wystąpień phi jest po prostu fabrykacją lub przypadkiem. Jednak przykłady, które wymieniłem faktycznie zawierają phi w swojej naturze</h4>
+                            <h4>Biorąc pod lupę rozmieszczenie liści na roślinie łodygowej, możemy zaobserwować, że każdy liść jest odchylony od poprzedniego o 137.5°. Stopień ten jest anologiczny do złotego podziału.</h4>
+                            <h4>Według badań przeprowadzonych na 700 gatunkach rośliń łodygowych, określone zostało, że taki sposób rozmieszczenia maksymalizuje powierzchnię liści odchylonych ku słońcu, jednocześnie zajmując najmniej miejsca w kodzie genetycznym rośliny.</h4>
+                            <h4>Na następnej stronie przestawię uproszczony schemat rozmieszczenia liści rośliny łodygowej opracowany przez zespół Go Figure.</h4>
+                        </div>
+                        <div id="M2I4">
+                            <h4>
+                                <img class="leafImg" src="https://gofiguremath.org/img/Leaf-Growth-1.png" alt="">
+                                <img class="leafImg" src="https://gofiguremath.org/img/Leaf-Growth-2.png" alt="">
+                                <img class="leafImg" src="https://gofiguremath.org/img/Leaf-Growth-3.png" alt="">
+                                <img class="leafImg" src="https://gofiguremath.org/img/Leaf-Growth-4.png" alt="">
+                                <img class="leafImg" src="https://gofiguremath.org/img/Leaf-Growth-5.png" alt="">
+                                <img class="leafImg" src="https://gofiguremath.org/img/Leaf-Growth-6.png" alt="">
+                                <img class="leafImg" src="https://gofiguremath.org/img/Leaf-Growth-7.png" alt="">
+                                ...
+                                <img class="leafImg" src="https://gofiguremath.org/img/Leaf-Growth-13.png" alt="">
+                            </h4>
+                            <h4>Jak możemy zauważyć, realtywna inkrementacja konta następnującego liścia jest równa stałej o wartości 137.5°.</h4>
+                            <h4>Jest to dużo bardziej efektywny sposób zapisu rozmieszczenia liści w kodzie genetycznym niż na przykład rozmieszczenie 4 liści o 90°, następnie kolejnych czterech o 45° i kolejnych ośmiu o 22.5° i tak dalej.</h4>
+                        </div>
+                        <div id="M2I5">
+                            <h4>Nie jest to jednak jedyna raz kiedy dana roślina "używa" złotego podziału. W uproszczeniu; kod genetyczny zawierający stałą jest używany w wielu miejsach. Między innymi w sposobie rozmieszczenia nasion w owocu, ilości płatków na kwiecie.</h4>
+                            <h4>Dość ciekawą konsekwencją tego jest fakt, że liczba płatków, liści, nasion w większości gatunków roślin jest liczą zawartą w ciągu Fibonacciego.</h4>
+                            <h4>Zachęcam do pochodzenia sobie po parku, bądź lesie i policzenia ile płatków mają kwiatki. Prawie wszystkie rośliny będą miały liczbę płatkow, które zawierają się w ciągu Fibonacciego</h4>
+                        </div>
+                        <div id="M2I6">
+                            <h4>&phi; jest liczbą ścisle powiązaną z ciągiem Fibonacciego. W następnym rodziale dogłebniej pokaże te powiązanie.</h4>
+                            <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
+                        </div>
                     </div>
                     <div id="tMain3" class="tSlideMain">
-                        <h1>TREE(1) I TREE(2)</h1>
-                        
+                        <h1>Złoty podział a ciąg Fibonacciego</h1>
+                        <div id="M3I1">
+                            <h2>Każdy ciąg zdefinowany przez liniową rekurencję z stałymi współczynnikami może być zapisane w postaci wyrażenia w zamknientej postaci.</h2>
+                            <h2>Wzór na ciąg Fibonacciego w zamknientej postaci nazywany wzorem Binet'a to:</h2>
+                            <h2><img style="width: 40%;"src="https://wikimedia.org/api/rest_v1/media/math/render/svg/80f3adaabc7795348c3647d253891b5790ef6dd7" alt=""></h2>
+                            <h2>Gdzie &psi; jest sprzężeniem postaci wyrazu.</h2>
+                            <h2>W tym przypadku &psi; = -&phi;<sup>-1</sup> więc możemy to równanie zapisać jako</h2>
+                            <h2><img style="width: 40%;"src="https://wikimedia.org/api/rest_v1/media/math/render/svg/451078e3f7c9ae5d67abd6a1e770602d3c9ebc63" alt=""></h2>
+                        </div>
+                        <div id="M3I2">
+                            <h2>Aby zobaczyć związek między ciągiem a tymi stałymi, zauważ, że &phi; i &psi; są obydwoma rozwiązaniami równania x<sup>2</sup> = x + 1 i w konsekwencji x<sup>n</sup> = x<sup>n-1</sup> + x<sup>n-2</sup>, dlatego potęgi &phi; i &psi; spełniają rekurencję Fibonacciego. Innymi słowy,</h2>
+                            <h2><img style="width: 40%;"src="https://wikimedia.org/api/rest_v1/media/math/render/svg/282a0b620cb2eca72787ef444e6d07d39678d383" alt=""></h2>
+                            <h2>Wynika stąd, że dla dowolnych wartości a i b, ciąg zdefiniowany przez:</h2>
+                            <h2><img style="width: 40%;"src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4eb55069f47b9ddaa49f1c88f557ce103e557b36" alt=""></h2>
+                            <h2>spełnia tę samą rekurencję,</h2>
+                            <h2><img style="width: 40%;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/49e155e3c74b9d82976473240c1fc8f5db5d0f1f" alt=""></h2>
+                        </div>
+                        <div id="M3I3">
+                            <h2>Jeśli a i b są wybrane tak, aby U<sub>0</sub> = 0 i U<sub>1</sub> = 1, wtedy wynikowy ciąg U<sub>n</sub> musi być ciągiem Fibonacciego. Jest to tożsame z wymogiem, aby a i b spełniały układ równań:</h2>
+                            <h2><img style="width: 25%;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6d0900f5323cf3537ffc6ed9765c4976ea192469" alt=""></h2>
+                            <h2>który ma rozwiązanie</h2>
+                            <h2><img style="width: 40%;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/214c97528ee0994fd5d62b3589e88a712b13f878" alt=""></h2>
+                            <h2>produkuje wymaganą formułę.</h2>
+                        </div>
+                        <div id="M3I4">
+                            <h2>Przyjmując wartości początkowe U<sub>0</sub> i U<sub>1</sub> jako dowolne stałe, bardziej ogólne rozwiązanie to:</h2>
+                            <h2><img style="width: 40%;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4eb55069f47b9ddaa49f1c88f557ce103e557b36" alt=""></h2>
+                            <h2>gdzie</h2>
+                            <h2><img style="width: 40%;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9b7a1f5df3f3d8a6b6e48e76a19c75a2b5c65645" alt=""></h2>
+                        </div>
+                        <div id="M3I5">
+                            <h2>Znając przybliżoną wartość phi, możemy przybliżyć dowolny wyraz ciągu Fibonacciego bez znania poprzedzających wyrazów tego ciągu.</h2>
+                            <h2>Metoda ta jest dużo szybsza od liczenia każdego wyrażu po kolei i jest często używana jako zammiennik od metody rekurencyjnej. Ważne jest jedynie pamiętanie o tym, że ta metoda jedynie przybliża wartość faktyczną dla danego n, więc nie została ona użyta w żadnym skrypcie na tej stronie.</h2>
+                            
+                        </div>
                     </div>
                     <div id="tMain4" class="tSlideMain">
                         <h1>TREE(3)</h1>

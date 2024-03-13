@@ -67,7 +67,7 @@ function PopIn(element){
     }, 500)
 }
 
-let nSlidesLookup = [0, 6, 8, 5, 3, 6, 6]
+let nSlidesLookup = [0, 6, 6, 5, 3, 6, 6]
 let interCount = 1
 function InternalSlideUpdate(direction){
     if(direction == "r"){
@@ -162,9 +162,9 @@ function DisplayCurrSlide(toShow){
 }
 
 function InfoRowInitialize(){
-    const RczymJest = new InfoRow("Czym jest ciąg fibonacciego?", 1)
+    const RczymJest = new InfoRow("Czym jest ciąg Fibonacciego?", 1)
     const RprosteWyt = new InfoRow("Złoty Podział", 2)
-    const RtreePrz = new InfoRow("Złoty podział", 3)
+    const RtreePrz = new InfoRow("Złoty podział a ciąg Fibonacciego", 3)
     const RJakDuze = new InfoRow("Ciąg Fibonacciego w naturze", 4)
     const RPoro = new InfoRow("Ciąg Fibonacciego w innych miejscach", 5)
     const RHist = new InfoRow("Zakończenie", 6)

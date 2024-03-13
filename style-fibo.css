@@ -226,3 +226,6 @@ input{
     align-self: baseline;
     font-family: 'Courier New', Courier, monospace;
 }
+.leafImg{
+    width: 22%;
+}
