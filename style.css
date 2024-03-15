@@ -18,6 +18,7 @@
     /*rechłem śmiechem -K*/
 }
 body{
+    min-height: fit-content;
     height: 100vh;
     font-family: var(--font-body);
     position: relative;
