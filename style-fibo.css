@@ -229,3 +229,22 @@ input{
 .leafImg{
     width: 22%;
 }
+
+#noSound{
+    display: none;
+    width: 100%;
+}
+
+#numberContainer{
+    max-height: 70vh;
+    max-width: 20vw;
+    border:1px black solid;
+    overflow:scroll;
+}
+#floatToRight{
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 50%;
+    
+}

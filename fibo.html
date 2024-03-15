@@ -218,12 +218,31 @@
                         <div id="M3I5">
                             <h2>Znając przybliżoną wartość phi, możemy przybliżyć dowolny wyraz ciągu Fibonacciego bez znania poprzedzających wyrazów tego ciągu.</h2>
                             <h2>Metoda ta jest dużo szybsza od liczenia każdego wyrażu po kolei i jest często używana jako zammiennik od metody rekurencyjnej. Ważne jest jedynie pamiętanie o tym, że ta metoda jedynie przybliża wartość faktyczną dla danego n, więc nie została ona użyta w żadnym skrypcie na tej stronie.</h2>
-                            
+                            <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
                         </div>
                     </div>
                     <div id="tMain4" class="tSlideMain">
-                        <h1>TREE(3)</h1>
-                        
+                        <h1>Ciąg Fibonacciego w muzyce</h1>
+                        <div id="M4I1">
+                            <h2>Jeżeli weźmiemy ciąg Fibonacciego i przekownwertujemy liczby na klawisze w standardowej skali C Major(jeżeli liczba "wychodzi" poza skalę, dokonujemy operacji modulo i wynik tego dajemy na skalę) możemy usłyszeć coś ciekawego.</h2>
+                            <h2><audio src="fibo.wav" controls></audio></h2>
+                            <h4><a href="#" onclick="openSound()">Kliknij tutaj jeżeli komputer nie posiada opcjii odtworzenia dzwięku</a></h4>
+                            <h2 ><img id="noSound" src="img/fibo/sound.png" alt=""></h2>
+                        </div>
+                        <div id="M4I2">
+                            <h2>Możemy usłyszeć, że zbiór nut się powtarza. Można pomyśleć, że to dość dziwne, ale kiedy pozna się mechanizm za tym stojący, okazuje się, że takie zachowanie jest dość oczywiste.</h2>
+                            <h2>W tym przykładzie muzycznym, dokonywałem operacji modulo na każdej z liczb i wynik wstawiałem na skalę muzyczną. Operacja modulo to nic innego jak reszta z dzielenia.</h2>
+                            <h2>Na następnej stronie przedstawie resztę z dzielenia pierwszych 32 wyrazów ciągu Fibonacciego przez 7.</h2>
+                        </div>
+                        <div id="M4I3">
+                            <h2><a id="genMod" href="#" onclick="generateModulo()">Kliknij aby wygenerować.</a></h2>
+                            <div id="numberContainer">
+
+                            </div>
+                            <div id="floatToRight">
+                                <h2>Na szaro zaznaczyłem co 16'stą operację. Od tego momentu wynik się powtarza.</h2>
+                            </div>
+                        </div>
                     </div>
                     <div id="tMain5" class="tSlideMain">
                         

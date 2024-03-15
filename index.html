@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Madimi+One&display=swap" rel="stylesheet">
 </head>
 <body>
+    
  <!--
     <h3>Myślę, że tło może być jasne z jakimiś elentami małymi. Jakies liczby z losową rotacją i opacity 25% jako taki filler. Na środku mogą być 4 kafelki o równej długości i szerokości z odnośnikami do podstron- odpowiednio dla każdego tematu. Taki pomysł. -K 28/2/2024 00:49</h3>
     <h3>Spoko mam dość niezły pomysł, paralax zrobie, grafike przygotuje kurdupel, jeśli ci sie nie spodoba to zmienimy, luz. -E 28/2/2024 21:23</h3> -->
@@ -54,5 +55,28 @@
     <div class="disclaimer">
         (i) Strona jest zoptymalizowana pod kątem komputerów. Urządzenia mobilne mogą źle odtwarzacz treści zawarte na stronie.
     </div>
+    
+    <script>
+        
+        //Skopiowałem to z neta; nie wiem czy działa ale xD 
+/* Storing user's device details in a variable*/
+let details = navigator.userAgent; 
+  
+  /* Creating a regular expression  
+  containing some mobile devices keywords  
+  to search it in details string*/
+  let regexp = /android|iphone|kindle|ipad/i; 
+    
+  /* Using test() method to search regexp in details 
+  it returns boolean value*/
+  let isMobileDevice = regexp.test(details); 
+    
+  if (isMobileDevice) { 
+      alert("Proszę otworzyć stronę na komputerze.") 
+  } else { 
+      console.log("You are using Desktop"); 
+  }
+  
+    </script>
 </body>
 </html>

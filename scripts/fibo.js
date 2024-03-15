@@ -53,11 +53,26 @@ function SpawnFibo(){
 }
 
 
+function openSound(){
+    $("#noSound").css({
+        display: "inline"
+    })
+}
 
+let currFibo = 0;
+mcon = $("#numberContainer")
+function generateModulo(){
+    for(var i = 0; i < 33; ++i){
+        currFibo = Fibonacci(i);
+        if(i%16 == 0){
+            mcon.append("<h5 style='background-color: grey;'>"+i+". |"+currFibo+":7 = <span style='float:right;'>"+currFibo%7+"</span></h5>")
+        }else{
+            mcon.append("<h5>"+i+". |"+currFibo+":7 = <span style='float:right;'>"+currFibo%7+"</span></h5>")
+        }
+    }
 
-
-
-
+    $("#genMod").css("display", "none")
+}
 
 
 
@@ -166,7 +181,7 @@ function InfoRowInitialize(){
     const RprosteWyt = new InfoRow("Złoty Podział", 2)
     const RtreePrz = new InfoRow("Złoty podział a ciąg Fibonacciego", 3)
     const RJakDuze = new InfoRow("Ciąg Fibonacciego w naturze", 4)
-    const RPoro = new InfoRow("Ciąg Fibonacciego w innych miejscach", 5)
+    const RPoro = new InfoRow("Ciąg Fibonacciego w muzyce", 5)
     const RHist = new InfoRow("Zakończenie", 6)
 
     $(".tInfoRow").on("click", ChangeSlide)
