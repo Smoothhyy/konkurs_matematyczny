@@ -3,7 +3,7 @@ var numberOfSlides = 6 //jeżeli coś się spierdoli po dodaniu nowych slajdów 
 let currMetaSlide = 0;
 $( document ).ready(function() {
     /* console.log */("jquery rready")
-
+    alert("dodaj Apophenia do tego że znajdowanie to przypadek nie zpomnij")
     
     
     InfoRowInitialize();
