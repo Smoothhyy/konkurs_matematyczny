@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    overflow: hidden;
     --main-color: rgb(27,27,50);
         --main-color-op: rgba(27,27,50, .9);
     --sec-color: rgb(2,31,59);
@@ -13,6 +14,7 @@
     --font-body: Verdana;
     --fancy-font: "Madimi One", sans-serif;
     --font-heading: "Lato";
+    
 }  
 #tMainContainer{
 /* s */
@@ -25,8 +27,9 @@
     display: flex;
     justify-content: center;
     background-color: var(--main-color-op);
-
-    height: 100vh;
+    min-height: fit-content;
+    min-height: 100vh;
+    height: fit-content;
 }
 .tMainSection{
     
@@ -46,7 +49,7 @@
     width: 100%;
     height: 2.5rem;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     align-items: center;
 }
 
@@ -80,9 +83,9 @@
     animation: arrow .5s linear infinite alternate;
 }
 
-.tTextInfoRow{
+/* .tTextInfoRow{
     
-}
+} */
 
 @keyframes arrow{
     from {
@@ -185,7 +188,7 @@ div[class^='tMain'], div[class*=' tMain']{
 
 .zapraszam{
     position: absolute;
-    bottom: 10%;
+    bottom: 10px;
     right: 7%;
     float:right;
 }

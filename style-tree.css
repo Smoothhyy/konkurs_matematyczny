@@ -78,9 +78,9 @@
     animation: arrow .5s linear infinite alternate;
 }
 
-.tTextInfoRow{
+/* .tTextInfoRow{
     
-}
+} */
 
 @keyframes arrow{
     from {
@@ -183,7 +183,7 @@ div[class^='tMain'], div[class*=' tMain']{
 
 .zapraszam{
     position: absolute;
-    bottom: 10%;
+    bottom: 10px;
     right: 5%;
     float:right;
 }
