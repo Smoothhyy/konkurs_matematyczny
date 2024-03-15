@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    overflow: hidden;
+    overflow-x: hidden;
     --main-color: rgb(27,27,50);
         --main-color-op: rgba(27,27,50, .9);
     --sec-color: rgb(2,31,59);
@@ -40,6 +40,7 @@
     background-color: var(--sec-color-op);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+    
 }
 .tInfo h3{
     text-align: end;
@@ -51,6 +52,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    overflow: hidden;
 }
 
 .tInfoContent{
