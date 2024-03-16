@@ -37,6 +37,7 @@ $(document).ready(function(){
 $(".introduction-to-pi").click(function(){
     $(".show-more-1").toggle(500);
     $(".history-of-pi").delay(2000).slideDown(500);
+    UpdateTitle("wprowadzenie");
 })
 
     const ShowMore2 = document.querySelectorAll(".show-more-2");
@@ -79,7 +80,7 @@ $(".history-of-pi").click(function(){
         }
         done_obj3 = true;
     })
-    
+    UpdateTitle("historia");
 })
 $(".fun-facts-pi-arrow").click(function(){
     if(!done_obj4){
@@ -125,4 +126,9 @@ $(".fun-facts-pi").click(function(){
 
     $(".show-more-3").slideDown(500);
 })
+UpdateTitle("ciekawostki");
 })
+
+function UpdateTitle(newTitle){
+    $(document).attr("title", "Liczba PI - " + newTitle);
+}

@@ -59,7 +59,6 @@ main{
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    position:sticky;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.15);
     z-index: 2;
 }

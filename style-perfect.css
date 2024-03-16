@@ -1,0 +1,253 @@
+*{
+    --main-color: rgb(27,27,50);
+        --main-color-op: rgba(27,27,50, .8);
+    --sec-color: rgb(2,31,59);
+        --sec-color-op: rgba(2,31,59, 0.9);
+    --font-color: rgb(216, 225, 233);
+    --heading-color: rgb(142, 176, 210);
+}
+main{
+    background: url("img/Tło.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    color: var(--font-color);
+    width: 100vw;
+    height: 100vh;
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+@keyframes bg-animation{
+    0%   {top:0px;}
+    25%  {top:20px;}
+    50%  {top:30px;}
+    75%  {top:20px;}
+    100% {top:0px;}
+}
+.bg-main{
+    background:  url("img/Yeees.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+
+    animation-name: bg-animation;
+    animation-duration: 5500ms;
+    animation-timing-function: steps(5, end);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.bg-main-shadow{
+    background:  linear-gradient(var(--main-color-op), var(--main-color-op));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.info-container{
+    overflow: hidden;
+    position: relative;
+    height: 90vh;
+    width: 85vw;
+    margin: 1rem;
+    padding-block: 2.5rem;
+    background-color: var(--sec-color-op);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+.info-container h1{
+    font-family: var(--font-heading);
+    font-style: italic;
+    
+}
+    .info1, .info2, .info3, .info4, .info5{
+        display: none;
+        padding: 2rem;
+        font-size: 1.25rem;
+        width: 80%;
+    }
+    .info-perfect{
+        position: relative;
+        font-size: 2rem;
+        cursor: pointer;
+        font-family: var(--fancy-font);
+        color: var(--heading-color);
+        margin: 1rem;
+    }
+    .info-perfect:hover{
+        color: rgb(221, 243, 250);
+    }
+
+        .info-perfect::before{
+            position: absolute;
+            transform: rotate(-90deg);
+            content: '';
+            left: -1.5rem;
+            bottom: 1rem;
+            margin-left: -12px;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid var(--heading-color);
+            
+        }
+        @keyframes arrow{
+            0% {left: -1.5rem}
+            50% {left: -2rem}
+            100% {left: -1.5rem}
+        }
+
+        .info-perfect:hover::before{
+            border-top: 12px solid rgb(221, 243, 250);
+            animation-name: arrow;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+            animation-direction: alternate-reverse;
+        }
+
+        .show-more1{
+            display: none;
+            font-size: 1.25rem;
+            margin: 1.5rem;
+        }
+        .show-more2{
+            display: none;
+            font-size: 1.15rem;
+        }
+            #show-more225{
+                color: var(--heading-color);
+                cursor: pointer;
+                font-style: italic;
+            }
+            #show-more225:hover{
+                text-decoration: underline;
+            }
+        .show-more25{
+            display: none;
+            margin-top: 1rem;
+            font-size: 1.25rem;
+        }
+        .show-more3{
+            display: none;
+            font-size: 1.35rem;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+                figure {
+                    padding: 1rem;
+                    background-color: rgba(240, 248, 255, 0.2);
+                    max-width: 20rem;
+                    max-height: 20rem;
+                    border-radius: 5px;
+                }
+                    figure img{
+                        max-width: 18rem;
+                        max-height: 18rem;
+                    }
+                figcaption {
+                    background-color: rgba(0, 0, 0, 0.3);
+                    color: white;
+                    font-style: italic;
+                    text-align: center;
+                    max-width: inherit;
+                }
+
+        .show-more4{
+            display: none;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+        }
+        .show-more5{
+            display: none;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+        }
+            #show-more525{
+                color: var(--heading-color);
+                cursor: pointer;
+                font-style: italic;
+            }
+            #show-more525:hover{
+                text-decoration: underline;
+            }
+            .show-more55{
+                display: none;
+                font-size: .85rem;
+            }
+                .bolder{
+                    font-weight: bolder;
+                    font-size: 1.15rem;
+                }
+            .show-more55::marker{
+                content: "\21B3";
+                font-size: 2rem;
+                font-weight: bolder;
+            }
+
+@keyframes arrow-left{
+        0% {left: 2.25rem}
+        50% {left: 1.75rem}
+        100% {left: 2.25rem}
+    }
+
+    .arrow-slider-left{
+        display: none;
+        position: absolute;
+        left: 2.25rem;
+        top: 50%;
+        margin-left: -25px;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 25px solid white;
+        transform: rotate(90deg);
+    }
+    .arrow-slider-left:hover{
+        border-top: 25px solid rgb(61, 61, 94);
+        animation-name: arrow-left;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function:linear;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes arrow-right{
+        0% {right: 2.25rem}
+        50% {right: 1.75rem}
+        100% {right: 2.25rem}
+    }
+
+    .arrow-slider-right{
+        display: none;
+        position: absolute;
+        right: 2.25rem;
+        top: 50%;
+        margin-right: -25px;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 25px solid white;
+        transform: rotate(-90deg);
+    }
+    .arrow-slider-right:hover{
+        border-top: 25px solid rgb(61, 61, 94);
+        animation-name: arrow-right;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function:linear;
+        animation-direction: alternate-reverse;
+    }

@@ -18,7 +18,7 @@
     /*rechłem śmiechem -K*/
 }
 body{
-    overflow-x: hidden;
+    overflow-y: hidden;
     min-height: fit-content;
     height: 100vh;
     font-family: var(--font-body);

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liczby perfekcyjne</title>
+    
+    <!-- OGÓLNY CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS DO PERFECT -->
+    <link rel="stylesheet" href="style-perfect.css">
+
+    <!-- CUSTOM FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Madimi+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <div class="bg-main"></div>
+        <div class="bg-main-shadow"></div>
+        <!-- POWROT DO STRONY GLOWNEJ -->
+        <a class="back" href="index.html">&larrhk;</a>
+
+        <section class="info-container">
+            <div class="info1">
+                <p class="info-perfect info-perfect1">Liczby perfekcyjne, czym są?</p>
+                <p class="show-more1">Liczba perfekcyjna(lub liczba doskonała) to taka liczba naturalna, której suma wszystkich naturalnych dzielników właściwych jest równa tej właśnie liczbie.</p>
+                <p class="show-more1">
+                Korzystając z funkcji sigma (funkcja która określa wszystkie dodatnie dzielniki danej liczby) możemy zdefiniować liczbę perfekcyjną jako liczbę spełniającą warunek
+                σ(n) = 2n.</p>
+            </div>
+            <div class="info2">
+                <p class="info-perfect info-perfect2">Ale dlaczego właściwie są takie ciekawe?</p>
+                <p class="show-more2">Po pierwsze, nie wiadomo jeszcze, czy takich liczb jest nieskończenie wiele, wiadomo natomiast, że jest ich na pewno kilka.</p>
+                <p class="show-more2">Liczba 6 jest najmniejszą liczbą doskonałą, <a id="show-more225">a dlaczego nią jest?</a></p>
+                <p class="show-more25">Zobaczmy: <br>
+                6 można uzyskać poprzez dodanie do siebie: <br>
+                1 + 2 + 3 co jest równe 6.</p>
+                <p class="show-more25">Jak widać, wszystkie naturalne dzielniki tej liczby dodane do siebie tworzą właśnie tę liczbę. Czyli to liczba doskonała.</p>
+            </div>
+            <div class="info3">
+                <p class="info-perfect info-perfect3">Liczba doskonała jako grafika:</p>
+                <div class="show-more3">
+                    <figure>
+                        <img src="img/perfect/szosteczka.png" alt="graficzne przedstawienie liczby 6">
+                        <figcaption>Liczba doskonała: 6</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/perfect/szosteczka2.png" alt="graficzne przedstawienie liczby 6">
+                        <figcaption>Liczba doskonała: 6</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="info4">
+                <p class="info-perfect info-perfect4">
+                    Parzystość a liczby perfekcyjne
+                </p>
+                <div class="show-more4">
+                    <!-- ZMIEŃ -->
+                    Wszystkie znane liczby doskonałe są parzyste. Wynika to bezpośrednio z konstrukcji doskonałych liczb za pomocą formuły Euklidesa, która zawiera czynnik 2^(p-1). Ponieważ 2^(p-1) jest zawsze czynnikiem, każda doskonała liczba utworzona z tej formuły będzie parzysta.
+                </div>
+                <div class="show-more4">
+                    <!-- ZMIEŃ -->
+                    W związku z powyższym, jeśli istnieją nieparzyste doskonałe liczby, musiałyby one być generowane przez inną metodę niż ta, oparta na formule Euklidesa. Jednak do dziś nie znaleziono żadnej nieparzystej doskonałej liczby, a ich istnienie jest nadal przedmiotem intensywnych badań.
+                </div>
+                <div class="show-more4">
+                    <!-- ZMIEŃ -->
+                    Parzystość doskonałych liczb ma związek z ich właściwościami dzielników. Ponieważ każda doskonała liczba jest sumą swoich dzielników właściwych (czyli dzielników, które są mniejsze od samej liczby), a te dzielniki często zawierają 2, to doskonałe liczby muszą być parzyste.
+                </div>
+            </div>
+            <div class="info5">
+                <p class="info-perfect info-perfect5">
+                    Przykłady liczb doskonałych
+                </p>
+                <div class="show-more5">
+                    W tym momencie liczb doskonałych, które zostały odkryte, jest naprawdę mało. Powodem tego jest niezwykła unikalność tych liczb, przez wieki matematycy badali ogromne liczby w poszukiwaniu liczb doskonałych, a żeby znaleźć kolejne, potrzeba niesamowicie wydajnych algorytmów, jak i komputerów.
+                </div>
+                <div class="show-more5">
+                   Jak już wcześniej było wspomniane, najpopularniejszym przykładem jest liczba 6, <a id="show-more525">ale są to też liczby:</a>
+                </div>
+                <ul>
+                    <li class="show-more55"><span class="bolder">28</span>, bo 1 + 2 + 4 + 7 + 14 = 28</li>
+                    <li class="show-more55"><span class="bolder">496</span>, bo 1 + 2 + 4 + 8 + 16 + 31 + 62 + 124 + 248 = 496</li>
+                    <li class="show-more55"><span class="bolder">8128</span>, bo 1 + 2 + 4 + 8 + 16 + 32 + 64 + 127 + 254 + 508 + 1016 + 2032 + 4064 = 8128</li>
+                    <li class="show-more55"><span class="bolder">33550336</span>, bo  1 + 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 + 1024 + 2048 + 4096 + 8192 + 16384 + 32768 + 65536 + 131072 + 262144 + 524288 + 1048576 + 2097152 + 4194304 + 8388608 + 16777216 + 33554432 = 33550336.</li>
+                    <li class="show-more55"><span class="bolder">8589869056</span>, bo 1 + 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 + 1024 + 2048 + 4096 + 8192 + 16384 + 32768 + 65536 + 131072 + 262144 + 524288 + 1048576 + 2097152 + 4194304 + 8388608 + 16777216 + 33554432 + 67108864 + 134217728 + 268435456 + 536870912 + 1073741824 + 2147483648 + 4294967296 + 8589934592 = 8589869056.</li>
+                </ul>
+            </div>
+            <a class="arrow-slider-left"></a>
+            <a class="arrow-slider-right"></a>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/perfect.js"></script>
+</body>
