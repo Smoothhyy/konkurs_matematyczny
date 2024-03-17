@@ -1,9 +1,9 @@
 InfoRowCont = $(".tInfoRowContainer")
-var numberOfSlides = 6 //jeżeli coś się spierdoli po dodaniu nowych slajdów to zmień to < i pamiętaj żeby index w klasach był niepowtarzalny
+var numberOfSlides = 5 //jeżeli coś się spierdoli po dodaniu nowych slajdów to zmień to < i pamiętaj żeby index w klasach był niepowtarzalny
 let currMetaSlide = 0;
 $( document ).ready(function() {
     /* console.log */("jquery rready")
-    alert("dodaj Apophenia do tego że znajdowanie to przypadek nie zpomnij")
+    
     
     
     InfoRowInitialize();
@@ -65,9 +65,9 @@ function generateModulo(){
     for(var i = 0; i < 33; ++i){
         currFibo = Fibonacci(i);
         if(i%16 == 0){
-            mcon.append("<h5 style='background-color: grey;'>"+i+". |"+currFibo+":7 = <span style='float:right;'>"+currFibo%7+"</span></h5>")
+            mcon.append("<h5 style='background-color: grey;'>"+i+". |"+currFibo+"%7 = <span style='float:right;'>"+currFibo%7+"</span></h5>")
         }else{
-            mcon.append("<h5>"+i+". |"+currFibo+":7 = <span style='float:right;'>"+currFibo%7+"</span></h5>")
+            mcon.append("<h5>"+i+". |"+currFibo+"%7 = <span style='float:right;'>"+currFibo%7+"</span></h5>")
         }
     }
 
@@ -82,7 +82,7 @@ function PopIn(element){
     }, 500)
 }
 
-let nSlidesLookup = [0, 6, 6, 5, 3, 6, 6]
+let nSlidesLookup = [0, 6, 6, 5, 7, 1, 6]
 let interCount = 1
 function InternalSlideUpdate(direction){
     if(direction == "r"){
@@ -180,9 +180,9 @@ function InfoRowInitialize(){
     const RczymJest = new InfoRow("Czym jest ciąg Fibonacciego?", 1)
     const RprosteWyt = new InfoRow("Złoty Podział", 2)
     const RtreePrz = new InfoRow("Złoty podział a ciąg Fibonacciego", 3)
-    const RJakDuze = new InfoRow("Ciąg Fibonacciego w muzyce", 4) /* ZMIENIONA KOLEJNOŚĆ BO NIE PASOWAŁA */
-    const RPoro = new InfoRow("Ciąg Fibonacciego w naturze", 5) /* ZMIENIONA KOLEJNOŚĆ BO NIE PASOWAŁA */
-    const RHist = new InfoRow("Zakończenie", 6)
+    const RJakDuze = new InfoRow("Okres Pisano", 4) /* ZMIENIONA KOLEJNOŚĆ BO NIE PASOWAŁA */
+    const RPoro = new InfoRow("Zakończenie", 5) /* ZMIENIONA KOLEJNOŚĆ BO NIE PASOWAŁA */
+    
 
     $(".tInfoRow").on("click", ChangeSlide)
 

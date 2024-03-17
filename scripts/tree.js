@@ -3,7 +3,7 @@ var numberOfSlides = 6 //jeżeli coś się spierdoli po dodaniu nowych slajdów 
 let currMetaSlide = 0;
 $( document ).ready(function() {
     /* console.log */("jquery rready")
-    alert("dyduch nie zapomnij zmienić kolorów w drzewkach, tzn. A i B");
+    //zmieniłem na białe
     
     
     InfoRowInitialize();
@@ -205,10 +205,10 @@ function DisplayCurrSlide(toShow){
 }
 
 function InfoRowInitialize(){
-    const RczymJest = new InfoRow("Czym jest TREE3", 1)
+    const RczymJest = new InfoRow("Czym jest TREE(3)", 1)
     const RprosteWyt = new InfoRow("Proste wytłumaczenie", 2)
-    const RtreePrz = new InfoRow("TREE1 i TREE2", 3)
-    const RJakDuze = new InfoRow("Jak duże jest TREE3", 4)
+    const RtreePrz = new InfoRow("TREE(1) i TREE(2)", 3)
+    const RJakDuze = new InfoRow("Jak duże jest TREE(3)", 4)
     const RPoro = new InfoRow("Porównanie wielkości", 5)
     const RHist = new InfoRow("Zakończenie", 6)
 

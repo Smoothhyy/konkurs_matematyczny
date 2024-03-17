@@ -154,7 +154,7 @@
                             <h4>Skąd jednak &phi; występuje w tak wielu miejscach?</h4>
                         </div>
                         <div id="M2I3">
-                            <h4>Prawda jest taka, że większość wystąpień phi jest po prostu fabrykacją lub przypadkiem. Jednak przykłady, które wymieniłem faktycznie zawierają phi w swojej naturze</h4>
+                            <h4>Prawda jest taka, że większość wystąpień phi jest po prostu fabrykacją lub przypadkiem wystąpienia apophenii. Jednak przykłady, które wymieniłem faktycznie zawierają phi w swojej naturze</h4>
                             <h4>Biorąc pod lupę rozmieszczenie liści na roślinie łodygowej, możemy zaobserwować, że każdy liść jest odchylony od poprzedniego o 137.5°. Stopień ten jest anologiczny do złotego podziału.</h4>
                             <h4>Według badań przeprowadzonych na 700 gatunkach rośliń łodygowych, określone zostało, że taki sposób rozmieszczenia maksymalizuje powierzchnię liści odchylonych ku słońcu, jednocześnie zajmując najmniej miejsca w kodzie genetycznym rośliny.</h4>
                             <h4>Na następnej stronie przestawię uproszczony schemat rozmieszczenia liści rośliny łodygowej opracowany przez zespół Go Figure.</h4>
@@ -216,6 +216,12 @@
                             <h2><img style="width: 40%; background-color:rgba(240, 248, 255, 0.347); border-radius: 5px; padding: 5px;" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9b7a1f5df3f3d8a6b6e48e76a19c75a2b5c65645" alt=""></h2>
                         </div>
                         <div id="M3I5">
+                            <h2>Inną metodą na zobrazowanie ścisłego połączenia ciagu Fibonacciego z złotym podziałem jest przedstawienie graficzne kolejnych wyrazów ciągu ułożonych w spiralę</h2>
+                            <h2><img style="width: 200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Fibonacci_Spiral.svg/330px-Fibonacci_Spiral.svg.png" alt=""> </h2>
+                            <h2><img style="width: 200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GoldenSpiralLogarithmic_color_in.gif/330px-GoldenSpiralLogarithmic_color_in.gif" alt=""></h2>
+                            <h2>W tym przykładzie widzimy, że kolejne wyrazy ciągu Fibonacciego układają się w spiralę, która blisko odpowiada logarytmicznej spirali o współczynniku rośnięcia równym &phi;</h2>
+                        </div>
+                        <div id="M3I6">
                             <h2>Znając przybliżoną wartość phi, możemy przybliżyć dowolny wyraz ciągu Fibonacciego bez znania poprzedzających wyrazów tego ciągu.</h2>
                             <h2>Metoda ta jest dużo szybsza od liczenia każdego wyrazu po kolei i jest często używana jako zamiennik od metody rekurencyjnej. Ważne jednak jest, by pamiętać, że ta metoda jedynie przybliża wartość faktyczną dla danego n, więc nie została ona użyta w żadnym skrypcie na tej stronie.</h2>
                             <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
@@ -224,7 +230,7 @@
                     <div id="tMain4" class="tSlideMain">
                         <h1>Ciąg Fibonacciego w muzyce</h1>
                         <div id="M4I1">
-                            <h2>Jeżeli weźmiemy ciąg Fibonacciego i przekownwertujemy liczby na klawisze w standardowej skali C Major (jeżeli liczba "wychodzi" poza skalę, dokonujemy operacji modulo i wynik tego dajemy na skalę) możemy usłyszeć coś ciekawego.</h2>
+                            <h2>Jeżeli weźmiemy ciąg Fibonacciego i przekownwertujemy liczby na klawisze w standardowej skali C Major (jeżeli liczba "wychodzi" poza skalę, dokonujemy operacji modulo i wynik tego dajemy na skalę) możemy usłyszeć coś ciekawego. (takiej operacjii dokonałem na pierwszych 96 liczbach ciągu.)</h2>
                             <h2><audio src="fibo.wav" controls></audio></h2>
                             <h4><a href="#" onclick="openSound()">Kliknij tutaj jeżeli komputer nie posiada opcjii odtworzenia dzwięku</a></h4>
                             <h2 ><img id="noSound" src="img/fibo/sound.png" alt=""></h2>
@@ -241,11 +247,47 @@
                             </div>
                             <div id="floatToRight">
                                 <h2>Na szaro zaznaczyłem co 16'stą operację. Od tego momentu wynik się powtarza.</h2>
+                                <h2>Takie powtórzenie jest nazywane "Okresem Pisano" nazwanę na cześć Leadardo Pisano.</h2>
+                                <h2>Leadardo Pisano już się pojawił na tej stronie, albowiem Pisano to inne imię Fibonacciego.</h2>
                             </div>
+                        </div>
+                        <div id="M4I4">
+                            <h2>Ciąg Fibonacciego posiada pewną zależność: n'ty wyraż ciągu dzieli m'ty wyraż bez reszty tylko i wyłącznie wtedy, kiedy n dzieli m bez reszty.</h2>
+                            <h2>Możemy powiedzieć, że F<sub>m</sub>|F<sub>n</sub> &iff; m|n. Przez | rozumiemy tak zwane dzielenie całkowite, czyli dzielenie bez reszty.</h2>
+                            <h2>Na przykład F<sub>5</sub>=5, więc 5|F<sub>n</sub> &iff; 5|n. Wiec każdy 5 wyraz według tego stwierdzenia jest podzielny przez 5.</h2>
+                            <h2>Na następnej stronie sprawdzimy to.</h2>
+                        </div>
+                        <div id="M4I5">
+                            <h4>1, 1, 2, 3, <span class="fifth">5</span>, 8, 13, 21, 34, <span class="fifth">55</span>, 89, 144, 233, 377, <span class="fifth">610</span>, 987, 1597, 2584, 4181, <span class="fifth">6765</span>, 10946, 17711, 28657, 46368, <span class="fifth">75025</span>, 121393, 196418, 317811, 514229, <span class="fifth">832040</span></h4>
+                            <h2>Jak widzimy, rzeczywiście tak jest.</h2>
+                            <h2>Jeżeli weźiemy F<sub>6</sub>=8, możemy zauważyć, że co 6'sty wyraż jest podzielny przez 8.</h2>
+                            <h4>1, 1, 2, 3, 5, <span class="fifth">8</span>, 13, 21, 34, 55, 89, <span class="fifth">144</span>, 233, 377, 610, 987, 1597, <span class="fifth">2584</span>, 4181, 6765, 10946, 17711, 28657, <span class="fifth">46368</span>, 75025, 121393, 196418, 317811, 514229, <span class="fifth">832040</span></h4>
+                            <h4>Ta zależność jest połączona z kolejną zależnością: </h4>
+                        </div>
+                        <div id="M4I6">
+                            <h2>Jeżeli powrócimy do przykładu dzielenia prez 7, otrzymywaliśmy powtarzający się okres: 0 1 1 2 3 5 1 6 0 6 6 5 4 2 6 1 0 ... 0 1 1 2 3 5 1 6 0 6 6 5 4 2 6 1 0</h2>
+                            <h2>Okres ten możemy wyznaczyć znając jedynie przez jaką liczbę dzielimy.</h2>
+                            <h2>Biorą 0 i 1 jako liczby początkowe, dokonujemy znanej już nam opercaji dodawania dwóch ostatnich wyrazów</h2>
+                            <h2>Tak więc; 0 + 1 = 1.<br> 1 + 1 = 2.<br> 2 + 1 = 3.<br> 3 + 2 = 5...<br></h2>
+                            <h2>Jednakże, kiedy wynik sumy jest większy bądź równy od dzielnika, odejmujemy od niego dzielnik. Więc kontynuacją obliczania okresu będzie:</h2>
+                            <h2> 5 + 3 = 8 # 8 &GreaterEqual; 7, więc 8 - 7 = 1.<br> 1 + 5 = 6.<br> 6 + 1 = 7 # 7 &GreaterEqual; 7, więc 7 - 7 = 0.<br> 0 + 6 = 6.<br> 6 + 0 = 6</h2>
+                            <h2>I tak dalej..</h2>
+                        </div>
+                        <div id="M4I7">
+                            <h2>Kiedy jednak pojawi się sytuacja, w której dodamy do siebie 6 i 1, otrzymamy 0, a kolejnym równaniem będzie 0 + 1 </h2>
+                            <h2>6 + 1 = 7 # 7 &GreaterEqual; 7, więc 7 - 7 = 0. <br> 0 + 1 = 1. <br> 1 + 1 = 2 <br> 2 + 1 = 3....</h2>
+                            <h2>Możemy zuważyć, że Okres zacznie się powtarzać. Za każdym razem kiedy "dostajemy" jeden poprzedzone zerem, możemy się spodziewać, że jest to punkt początkowy powtarzania się Okresu.</h2>
+                            <h2>Stąd możemy usłyszeć repetycję nut w przykładzie muzycznym do tej strony.</h2>
+                            <h4 class="zapraszam">Zapraszam na kolejny rozdział.</h4>
                         </div>
                     </div>
                     <div id="tMain5" class="tSlideMain">
-                        
+                        <h1>Zakończenie</h1>
+                        <div id="M5I1">
+                            <h2>Ciąg Fibonacciego to w mojej opinii jeden z najbardziej fascynujących ciągów. Stanowi on inspirację dla wielu dziedzin takich jak matematyka, malarstwo, biologia i architektura.</h2>
+                            <h2>Złoty Podzial może być znaleziony na pozór odległych od siebie dziedzinach, a piękno ciągu Fibonacciego leży w jego prostocie.</h2>
+                            <h4 class="zapraszam">Zapraszam do odwiedzenia innych tematów z tej strony, które można wybrać po kliknięciu strzałki powrotu w lewym górnym rogu ekranu.</h4>
+                        </div>
                     </div>
                     <div id="tMain6" class="tSlideMain">
                     
