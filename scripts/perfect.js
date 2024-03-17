@@ -34,6 +34,12 @@ $(".info-perfect5").click(function (){
     $("#show-more525").click(function () {
         $(".show-more55").slideDown(750);
     })
+$(".info-perfect6").click(function (){
+    $(".show-more6").slideDown(750);
+    $(".zapraszam").css(
+        "display","block"
+    )
+})
 
 $(".arrow-slider-right").click(function() {
     if(currentSlide == 1){
@@ -60,7 +66,14 @@ $(".arrow-slider-right").click(function() {
         currentSlide = 5;
         UpdateTitle("przykłady");
     }
+    else if(currentSlide == 5){
+        $(".info5").slideUp(500);
+        $(".info6").delay(500).slideDown(500);
+        currentSlide = 6;
+        UpdateTitle("podsumowanie");
+    }
 })
+
 $(".arrow-slider-left").click(function (){
     if(currentSlide == 2){
         $(".info2").slideUp(500);
@@ -85,6 +98,12 @@ $(".arrow-slider-left").click(function (){
         $(".info4").delay(500).slideDown(500);
         currentSlide = 4;
         UpdateTitle("jako liczby parzyste");
+    }
+    else if(currentSlide == 6){
+        $(".info6").slideUp(500);
+        $(".info5").delay(500).slideDown(500);
+        currentSlide = 5;
+        UpdateTitle("przykłady");
     }
 })
 

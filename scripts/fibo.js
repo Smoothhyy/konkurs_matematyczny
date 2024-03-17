@@ -180,8 +180,8 @@ function InfoRowInitialize(){
     const RczymJest = new InfoRow("Czym jest ciąg Fibonacciego?", 1)
     const RprosteWyt = new InfoRow("Złoty Podział", 2)
     const RtreePrz = new InfoRow("Złoty podział a ciąg Fibonacciego", 3)
-    const RJakDuze = new InfoRow("Ciąg Fibonacciego w naturze", 4)
-    const RPoro = new InfoRow("Ciąg Fibonacciego w muzyce", 5)
+    const RJakDuze = new InfoRow("Ciąg Fibonacciego w muzyce", 4) /* ZMIENIONA KOLEJNOŚĆ BO NIE PASOWAŁA */
+    const RPoro = new InfoRow("Ciąg Fibonacciego w naturze", 5) /* ZMIENIONA KOLEJNOŚĆ BO NIE PASOWAŁA */
     const RHist = new InfoRow("Zakończenie", 6)
 
     $(".tInfoRow").on("click", ChangeSlide)

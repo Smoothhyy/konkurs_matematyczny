@@ -16,6 +16,9 @@
     --font-heading: "Lato";
     
 }  
+body{
+    overflow-y: scroll;
+}
 #tMainContainer{
 /* s */
     position: relative;
@@ -225,7 +228,7 @@ input{
     background-color: black;
     color: white;
     padding: 1rem;
-    
+    margin-bottom: 2rem;
     font-size: 1rem;
     font-weight: 800;
     align-self: baseline;
@@ -244,7 +247,7 @@ input{
     max-height: 70vh;
     max-width: 20vw;
     border:1px black solid;
-    overflow:scroll;
+    overflow-y:scroll;
 }
 #floatToRight{
     position: absolute;

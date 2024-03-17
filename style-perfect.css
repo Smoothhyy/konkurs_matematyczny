@@ -75,7 +75,7 @@ main{
     font-style: italic;
     
 }
-    .info1, .info2, .info3, .info4, .info5{
+    .info1, .info2, .info3, .info4, .info5, .info6{
         display: none;
         padding: 2rem;
         font-size: 1.25rem;
@@ -199,6 +199,11 @@ main{
                 font-size: 2rem;
                 font-weight: bolder;
             }
+            .show-more6{
+                display: none;
+                font-size: 1.15rem;
+                margin-bottom: 1rem;
+            }
 
 @keyframes arrow-left{
         0% {left: 2.25rem}
@@ -251,3 +256,17 @@ main{
         animation-timing-function:linear;
         animation-direction: alternate-reverse;
     }
+
+
+.credits{
+    z-index: 100;
+}
+.zapraszam{
+    position: absolute;
+    display: none;
+    bottom: 3rem;
+    right: 1rem;
+    font-size: 1rem;
+    max-width: 30rem;
+    font-style: italic;
+}

@@ -3,7 +3,7 @@ var numberOfSlides = 6 //jeżeli coś się spierdoli po dodaniu nowych slajdów 
 let currMetaSlide = 0;
 $( document ).ready(function() {
     /* console.log */("jquery rready")
-
+    alert("dyduch nie zapomnij zmienić kolorów w drzewkach, tzn. A i B");
     
     
     InfoRowInitialize();
@@ -49,7 +49,7 @@ function CompareScore(){
         })
     }
 
-    $("#M4I1").append("<br>Wynik wysłany! Na następnej stronie będziesz, mógł/mogła porównać swój wynik z średnią użytkowników.")
+    $("#M4I1").append("<br>Wynik wysłany! Na następnej stronie będziesz, mógł/mogła porównać swój wynik ze średnią użytkowników.")
 }
 
 
