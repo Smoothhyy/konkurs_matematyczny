@@ -38,6 +38,10 @@ body{
         text-shadow: 0px 0px 10px snow;
         text-decoration: none;
     }
+    .bolder{
+        font-weight: bolder;
+        font-size: 1.15rem;
+    }
 main{
     /* background-color: rgb(75, 8, 8); */ 
     background: linear-gradient(var(--sec-color-op), var(--sec-color-op)), url("img/Miastooooogrrr.png");

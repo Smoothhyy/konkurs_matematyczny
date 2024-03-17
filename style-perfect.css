@@ -190,10 +190,7 @@ main{
                 display: none;
                 font-size: .85rem;
             }
-                .bolder{
-                    font-weight: bolder;
-                    font-size: 1.15rem;
-                }
+                
             .show-more55::marker{
                 content: "\21B3";
                 font-size: 2rem;
