@@ -183,6 +183,7 @@ $(".examples-arrow").click(function() {
 })
 $(".examples").click(function() {
     $(".show-more-4").slideDown(500);
+    $(".zapraszam").slideDown(500);
 })
 
 

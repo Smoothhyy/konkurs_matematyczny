@@ -120,6 +120,7 @@ main{
         }
 
 .info-container{
+    position: relative;
     width: 60vw;
     height: 95vh;
     margin: 1rem;
@@ -243,4 +244,13 @@ main{
     text-align: left;
     left: 0px;
     right: none;
+}
+.zapraszam{
+    position: absolute;
+    display: none;
+    bottom: 1.5rem;
+    right: 1rem;
+    font-size: .75rem;
+    max-width: 20rem;
+    font-style: italic;
 }
